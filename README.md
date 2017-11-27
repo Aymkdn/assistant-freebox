@@ -11,7 +11,7 @@ Si vous n'avez pas installé [`assistant-plugins`](https://aymkdn.github.io/assi
 Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), et que vous souhaitez ajouter ce plugin, alors :
   - Pour Windows, télécharger [`install_freebox.bat`](https://github-proxy.kodono.info/?q=https://raw.githubusercontent.com/Aymkdn/assistant-freebox/master/install_freebox.bat&download=install_freebox.bat) dans le répertoire `assistant-plugins`, puis l'exécuter en double-cliquant dessus.  
   - Pour Linux/MacOS, ouvrir une console dans le répertoire `assistant-plugins` et taper :  
-  `npm install assistant-freebox --save --loglevel error && npm run-script postinstall`
+  `npm install assistant-freebox@latest --save --loglevel error && npm run-script postinstall`
 
 ## Configuration
 
