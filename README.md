@@ -1,14 +1,23 @@
-# Freebox
+# assistant-freebox
 
-Ce plugin permet de contrôler la Freebox Révolution.
+Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de contrôler la Freebox Révolution.
 
 **/!\ Attention** : pour que le plugin soit fonctionnel, il faut activer le AirMedia sur la Freebox en allant dans **Réglages** → **Applications** → **AirMedia Video** puis **activer AirMedia**.
 
+## Installation
+
+Si vous n'avez pas installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), alors il faut le faire, et sélectionner **freebox** comme plugin.
+
+Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), et que vous souhaitez ajouter ce plugin, alors :
+  - Pour Windows, télécharger [`install_freebox.bat`](https://github-proxy.kodono.info/?q=https://raw.githubusercontent.com/Aymkdn/assistant-freebox/master/install_freebox.bat&download=install_freebox.bat) dans le répertoire `assistant-plugins`, puis l'exécuter en double-cliquant dessus.  
+  - Pour Linux/MacOS, ouvrir une console dans le répertoire `assistant-plugins` et taper :  
+  `npm install assistant-freebox --save --loglevel error && npm run-script postinstall`
+
 ## Configuration
 
-Éditer le fichier `configuration.json`.
+Éditer le fichier `configuration.json` du répertoire `assistant-plugins`.
 
-On y trouve plusieurs paramètres. Le seul important qu'il vous faut modifier est `code_telecommande`.
+Dans la section concernant le plugin `freebox`, on trouve plusieurs paramètres. Le seul important qu'il vous faut modifier est `code_telecommande`.
 
 ### `code_telecommande`
 
@@ -31,14 +40,6 @@ Il est conseillé de réduire la zone de recherche. Par exemple, supposons que v
 ### `use_Mon_Bouquet`
 
 À mettre à `true` si vous souhaitez que le lancement de la télé se fasse dans le menu `Mon Bouquet` (vos chaines favorites) plutôt que dans `Freebox TV`.
-
-## Modifier les chaines TV (optionnel)
-
-Les chaines de TV sont automatiquement récupérées depuis le site de Free au démarrage du plugin, cependant certaines chaines peuvent être mal transcrites par votre Assistant.
-
-Par exemple si vous dites `zappe sur Mangas`, l'Assistant va comprendre `zappe sur Manga` (sans le `s` final) et donc la chaine ne sera pas reconnu par le plugin.
-
-Pour palier à cela, ouvrir le fichier `replace_chaine.json` et s'inspirer des exemples présents. J'ai déjà modifié pour les principales chaines.
 
 ## Utilisation
 

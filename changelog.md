@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0 ()**
+
+  - Le plugin devient autonome avec une nouvelle structure pour le programme
+
 **Change Log v1.1 (22 Novembre 2017)**
 
   - Délai passé à 3 secondes après la touche `home` (car 2 secondes n'étaient parfois pas suffisants)

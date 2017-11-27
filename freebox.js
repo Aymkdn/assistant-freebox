@@ -503,13 +503,12 @@ AssistantFreebox.prototype.goToFolder=function(path) {
 /**
  * Initialisation du plugin
  *
+ * @param  {Object} configuration La configuration
  * @param  {Object} plugins Un objet qui contient tous les plugins chargés
  * @return {Promise} resolve(this)
  */
-exports.init=function(plugins) {
-  var configuration = require('./configuration');
-  var af = new AssistantFreebox(configuration);
-  return af.init(plugins)
+exports.init=function(configuration, plugins) {
+  return new AssistantFreebox(configuration).init(plugins)
   .then(function(resource) {
     console.log("[assistant-freebox] Plugin chargé et prêt.");
     return resource;
