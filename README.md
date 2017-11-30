@@ -13,6 +13,8 @@ Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/ass
 
 ## Configuration
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g-KuRk0oYSg?rel=0" frameborder="0" allowfullscreen></iframe>
+  
 **/!\ Attention** : pour que le plugin soit fonctionnel, il faut activer le AirMedia sur la Freebox en allant dans **Réglages** → **Applications** → **AirMedia Video** puis **activer AirMedia**.
 
 Éditer le fichier `configuration.json` du répertoire `assistant-plugins`.
