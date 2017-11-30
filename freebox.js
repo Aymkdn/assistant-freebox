@@ -118,8 +118,7 @@ AssistantFreebox.prototype.getAuthorization=function() {
                 console.log("[assistant-freebox] Le plugin a été autorisé sur la Freebox");
                 // on sauvegarde la confiuration dans le fichier configuration.json
                 try {
-                  var txt = "{\r\n" + JSON.stringify(_this.config).replace(/,/g, ",\r\n  ").slice(1,-1) + "\r\n}";
-                  fs.writeFileSync(path.join(__dirname, 'configuration.json'), txt, 'utf8');
+                  _this.plugins.assistant.saveConfig('freebox', _this.config);
                   console.log("[assistant-freebox] Configuration terminée. Vous êtes prêt à utiliser le plugin Freebox.");
                   prom_res();
                 } catch(e) {
@@ -380,8 +379,7 @@ AssistantFreebox.prototype.requestSession=function() {
 AssistantFreebox.prototype.isPlayerOn=function() {
   var _this = this;
   var debut=new Date().getTime();
-  // si on a le paramètre "check_player_on" à "false" dans la configuration, alors on ignore cette étape et on considère que la Freebox est toujours allumée
-  if (_this.config.check_player_on === false) return Promise.resolve(true);
+  if (_this.config.checkPlayerOn === false) return Promise.resolve(true);
   return _this.requestSession()
   .then(function() {
     var options = {
