@@ -380,6 +380,8 @@ AssistantFreebox.prototype.requestSession=function() {
 AssistantFreebox.prototype.isPlayerOn=function() {
   var _this = this;
   var debut=new Date().getTime();
+  // si on a le paramètre "check_player_on" à "false" dans la configuration, alors on ignore cette étape et on considère que la Freebox est toujours allumée
+  if (_this.config.check_player_on === false) return Promise.resolve(true);
   return _this.requestSession()
   .then(function() {
     var options = {

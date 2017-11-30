@@ -2,8 +2,6 @@
 
 Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de contrôler la Freebox Révolution.
 
-**/!\ Attention** : pour que le plugin soit fonctionnel, il faut activer le AirMedia sur la Freebox en allant dans **Réglages** → **Applications** → **AirMedia Video** puis **activer AirMedia**.
-
 ## Installation
 
 Si vous n'avez pas installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), alors il faut le faire, et sélectionner **freebox** comme plugin.
@@ -15,21 +13,23 @@ Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/ass
 
 ## Configuration
 
+**/!\ Attention** : pour que le plugin soit fonctionnel, il faut activer le AirMedia sur la Freebox en allant dans **Réglages** → **Applications** → **AirMedia Video** puis **activer AirMedia**.
+
 Éditer le fichier `configuration.json` du répertoire `assistant-plugins`.
 
-Dans la section concernant le plugin `freebox`, on trouve plusieurs paramètres. Le seul important qu'il vous faut modifier est `code_telecommande`.
+Dans la section concernant le plugin `freebox`, on trouve plusieurs paramètres. **Le seul important qu'il vous faut modifier est `code_telecommande`**.
 
-### `code_telecommande`
+### Paramètre `code_telecommande`
 
 Allumer la Freebox, aller complètement à gauche dans la section **Réglages**, puis descendre jusqu'à **Système**, puis dans **Informations Freebox Player et Server**.
 
 Dans le premier onglet vous trouverez le **code télécommande réseau**. Inscrire ce nombre dans le fichier de configuration.
 
-### `box_to_control`
+### Paramètre `box_to_control`
 
 Par défaut c'est la box dénommée `hd1` qui est pilotée, mais si vous avez plusieurs box vous pouvez modifier ce paramètre en mettant, par exemple, `hd2`.
 
-### `search_path`
+### Paramètre `search_path`
 
 Une des fonctionnalités est la possibilité de se déplacer dans un dossier de la Freebox.
 
@@ -37,9 +37,15 @@ Par exemple, en disant *« OK Google, va dans le dossier Star Trek »*. Il va al
 
 Il est conseillé de réduire la zone de recherche. Par exemple, supposons que vous voulez seulement rechercher parmi vos séries télé qui sont stockées dans `Perso/Mes Séries/`, alors mettre `/Disque dur/Vidéos/Perso/Mes Séries/`.
 
-### `use_Mon_Bouquet`
+### Paramètre `use_Mon_Bouquet`
 
 À mettre à `true` si vous souhaitez que le lancement de la télé se fasse dans le menu `Mon Bouquet` (vos chaines favorites) plutôt que dans `Freebox TV`.
+
+### Paramètre `check_player_on`
+
+Celui-ci n'est à ajouter que si vous avez des problèmes lorsque le programme vérifie si la Freebox est allumée. Vérifiez d'abord que AirMedia est bien activé (comme inidqué plus haut sur cette page) et essayez de redémarrer votre box.
+
+Si cela ne fonctionne pas et que le programme continue à ne pas réussir à détecter si la Freebox est allumée ou éteinte, alors vous pouvez ajouter le paramètre `check_player_on` en le mettant à la valeur `false`.
 
 ## Utilisation
 

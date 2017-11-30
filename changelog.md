@@ -1,6 +1,6 @@
 # Changelog
 
-**Change Log v2.0 ()**
+**Change Log v2.0 (30 Novembre 2017)**
 
   - Le plugin devient autonome avec une nouvelle structure pour le programme
 
