@@ -89,17 +89,17 @@ Il est également possible de créer ses propres applets et commandes pour pilot
 
 Il faut pour cela procéder ainsi :
 
-  1) Créer une nouvelle *applet* dans IFTTT : [https://ifttt.com/create](https://ifttt.com/create)
-  2) Cliquer sur **this** puis choisir **Google Assistant**
-  3) Choisir la carte **Say a simple phrase** (ou autre, selon votre cas)
-  4) Dans *« What do you want to say? »* mettre la phrase qui va déclencher l'action
-  5) Remplir les autres champs de la carte
-  6) Maintenant, cliquer sur **that** puis choisir **Pushbullet**
-  7) Choisir la carte **Push a Note**
-  8) Dans le champs *« Title »*, mettre `Assistant`
-  9) Dans le champs *« Message »*, mettre `freebox_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule) (voir plus bas)
-  10) Enregistrer puis cliquer sur **Finish**
-  11) Dites : « OK Google » suivi de votre phrase spéciale du point 4)
+  1) Créer une nouvelle *applet* dans IFTTT : [https://ifttt.com/create](https://ifttt.com/create)  
+  2) Cliquer sur **this** puis choisir **Google Assistant**  
+  3) Choisir la carte **Say a simple phrase** (ou autre, selon votre cas)  
+  4) Dans *« What do you want to say? »* mettre la phrase qui va déclencher l'action  
+  5) Remplir les autres champs de la carte  
+  6) Maintenant, cliquer sur **that** puis choisir **Pushbullet**  
+  7) Choisir la carte **Push a Note**  
+  8) Dans le champs *« Title »*, mettre `Assistant`  
+  9) Dans le champs *« Message »*, mettre `freebox_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule) (voir plus bas)  
+  10) Enregistrer puis cliquer sur **Finish**  
+  11) Dites : « OK Google » suivi de votre phrase spéciale du point 4)  
   12) Google Home va s'exécuter
 
 ### Commandes
