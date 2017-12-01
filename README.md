@@ -51,7 +51,7 @@ Si cela ne fonctionne pas et que le programme continue à ne pas réussir à dé
 
 ## Utilisation
 
-J'ai créé des applets IFTTT qui sont déjà disponibles. Vous pouvez donc les utiliser. Pour cela, [chercher "Freebox" sur IFTTT](https://ifttt.com/search/query/freebox).
+J'ai créé des applets IFTTT qui sont déjà disponibles. Vous pouvez donc les utiliser.
 
 Voici les phrases clés à dire — s'assurer d'avoir installé les applets associées :
   - `allume la Freebox` ([https://ifttt.com/applets/qa8rME2N-allume-la-freebox](https://ifttt.com/applets/qa8rME2N-allume-la-freebox)) : allume simplement la Freebox
