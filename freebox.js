@@ -381,7 +381,7 @@ AssistantFreebox.prototype.requestSession=function() {
 AssistantFreebox.prototype.isPlayerOn=function() {
   var _this = this;
   var debut=new Date().getTime();
-  if (_this.config.checkPlayerOn === false) return Promise.resolve(true);
+  if (_this.config.check_player_on === false) return Promise.resolve(true);
   return _this.requestSession()
   .then(function() {
     var options = {

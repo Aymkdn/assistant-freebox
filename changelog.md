@@ -2,6 +2,10 @@
 
 **Change Log v2.0.1 (2 Décembre 2017)**
 
+  - Correction d'un bug avec le paramètre `check_player_on`
+
+**Change Log v2.0.1 (2 Décembre 2017)**
+
   - Amélioration des messages d'erreur
 
 **Change Log v2.0 (30 Novembre 2017)**
