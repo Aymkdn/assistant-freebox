@@ -312,7 +312,9 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
             request({url:url})
             .then(function() { p_res() })
             .catch(function(err) {
-              if (err.response.body.indexOf("You don't have permission to access this file on this server.")) {
+              if (err.message.indexOf("connect ETIMEDOUT") > -1) {
+                p_rej("[assistant-freebox] Erreur : le Freebox Player ne répond pas ! Essayer de changer le paramètre 'box_to_control' dans la configuration de '"+_this.config.box_to_control+"' à 'hd"+(_this.config.box_to_control.charAt(2) == 1 ? '2':'1')+"', ou de vérifier votre réseau entre cet ordinateur et la Freebox Player.");
+              } else if (err.response && err.response.body && err.response.body.indexOf("You don't have permission to access this file on this server.") > -1) {
                 p_rej("[assistant-freebox] Erreur : le code télécommande fourni ("+_this.config.code_telecommande+") est incorrect !");
               } else {
                 p_rej("[assistant-freebox] Erreur lors de l'envoie de la commande vers la Freebox => ",err.response.body)

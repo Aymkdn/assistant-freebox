@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.1 (2 Décembre 2017)**
+
+  - Amélioration des messages d'erreur
+
 **Change Log v2.0 (30 Novembre 2017)**
 
   - Le plugin devient autonome avec une nouvelle structure pour le programme

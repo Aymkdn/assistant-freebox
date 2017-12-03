@@ -29,7 +29,7 @@ Dans le premier onglet vous trouverez le **code télécommande réseau**. Inscri
 
 ### Paramètre `box_to_control`
 
-Par défaut c'est la box dénommée `hd1` qui est pilotée, mais si vous avez plusieurs box vous pouvez modifier ce paramètre en mettant, par exemple, `hd2`.
+Par défaut c'est la box dénommée `hd1` qui est pilotée, mais il arrive que ce soit `hd2`.
 
 ### Paramètre `search_path`
 
