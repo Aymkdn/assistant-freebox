@@ -49,6 +49,18 @@ Celui-ci n'est à ajouter que si vous avez des problèmes lorsque le programme v
 
 Si cela ne fonctionne pas et que le programme continue à ne pas réussir à détecter si la Freebox est allumée ou éteinte, alors vous pouvez ajouter le paramètre `check_player_on` en le mettant à la valeur `false`.
 
+### Paramètre `delay_default`
+
+Par défaut un délai de 500 millisecondes est appliqué entre chaque envoi de commande vers la Freebox. Pour certains cela pose problème. Il est donc possible de modifier ce délai en ajoutant ce paramètre dans le fichier de configuration.
+
+### Paramètre `delay_canal`
+
+Par défaut un délai de 300 millisecondes est appliqué entre chaque envoi de commande de changement de chaine vers la Freebox (par exemple pour zapper sur la 12, on envoie `1`, on attend 300ms, puis on envoie `2`). Pour certains cela pose problème. Il est donc possible de modifier ce délai en ajoutant ce paramètre dans le fichier de configuration.
+
+### Paramètre `delay_volume`
+
+Par défaut un délai de 20 millisecondes est appliqué entre chaque envoi de commande de volume vers la Freebox (pour augmenter/baisser le volume). Il est possible de modifier ce délai en ajoutant ce paramètre dans le fichier de configuration.
+
 ## Utilisation
 
 J'ai créé des applets IFTTT qui sont déjà disponibles. Vous pouvez donc les utiliser.

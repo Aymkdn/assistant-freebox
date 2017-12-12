@@ -308,6 +308,13 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
         var url = baseURL + key;
         console.log("[assistant-freebox] Url => "+url);
         return new Promise(function(p_res, p_rej) {
+          var delay = _this.config.delay_default||500; // defaut
+          if (key.slice(0,3)==="vol") {
+            delay=_this.config.delay_volume||20; // pour le volume on veut réduire le délai entre chaque commande
+          }
+          if (Number.isInteger(key*1)) {
+            delay=_this.config.delay_canal||300; // pour le changement de chaine
+          }
           setTimeout(function() {
             request({url:url})
             .then(function() { p_res() })
@@ -320,7 +327,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
                 p_rej("[assistant-freebox] Erreur lors de l'envoie de la commande vers la Freebox => ",err.response.body)
               }
             })
-          }, (key.slice(0,3)==="vol"?20:500))
+          }, delay)
         })
       }
     })

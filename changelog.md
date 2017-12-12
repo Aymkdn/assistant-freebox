@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.3 (12 Décembre 2017)**
+
+  - Il est maintenant possible de configurer le délai entre les commandes envoyées vers la Freebox
+
 **Change Log v2.0.1 (2 Décembre 2017)**
 
   - Correction d'un bug avec le paramètre `check_player_on`
