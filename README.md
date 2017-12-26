@@ -149,6 +149,8 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `soundUp` : envoie la commande `vol_inc`
   - `programUp` : envoie la commande `prgm_inc`
   - `programDown` : envoie la commande `prgm_dec`
+  - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration), puis de s'y rendre
+  - `zappe sur ABC` : permet de zapper sur la chaine ABC (exemple : `freebox_zappe sur la 1` ou `freebox_zappe sur TF1`)
 
 ### Exemple
 
