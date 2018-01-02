@@ -3,9 +3,9 @@ var fs = require('fs');
 var path = require('path');
 var PromiseChain = function(arr, fct) {
   var dfd = Promise.resolve();
-  var res = arr.map(function(a) {
+  var res = arr.map(function(a, idx) {
     dfd = dfd.then(function() {
-      return fct(a)
+      return fct(a,idx)
     });
     return dfd
   });
@@ -40,8 +40,9 @@ AssistantFreebox.prototype.init = function(plugins) {
 
     _this.chaines = {}; // pour enregistrer le nom de chaine -> numéro de chaine
     // on récupère les chaines Free
-    console.log("[assistant-freebox] Récupération des chaines télé sur free.fr...");
-    return request('http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now())
+    console.log("[assistant-freebox] Récupération des chaines télé...");
+    var url = (_this.config.use_Chaines_CANAL ? 'https://assistant.kodono.info/freebox.php?param=canalsat' : 'http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now());
+    return request(url)
   })
   .then(function(response) {
     // on va lire le fichier replace_chaine.json qui permet de substituer certaines chaines
@@ -232,15 +233,24 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       }
       case 'on': { key='power,wait7000'; break; }
       case 'off': { key='power'; break; }
-      case 'tv': { key=(_this.config.use_Mon_Bouquet==false?'home,wait3000,right,left,red,ok,wait4000':'home,wait3000,right,left,red,up,up,up,ok,wait4000'); break; }
-      /*case 'tvOn': { key='power,wait7000,'+(_this.config.use_Mon_Bouquet==false?'home,right,left,red,ok':'home,right,left,red,up,up,up,ok'); break; }*/
+      case 'tv': {
+        key = 'home,wait3000,home,ok,wait4000';
+        if (_this.config.use_Mon_Bouquet==true) {
+          key='home,wait3000,home,up,up,up,ok,wait4000';
+        }
+        if (_this.config.use_Chaines_CANAL==true) {
+          key='home,wait3000,home,down,down,ok,wait7000';
+        }
+        break;
+      }
+      /*case 'tvOn': { key='power,wait7000,'+(_this.config.use_Mon_Bouquet==false?'home,home,ok':'home,home,up,up,up,ok'); break; }*/
       case 'unmute': { key='mute'; break; }
       case 'home': { key='home,wait3000,red'; break; }
       case 'back': { key='red'; break; }
       case 'pause': { key='play'; break; }
-      case 'videos': { key='home,wait3000,right,left,red,right,ok'; break; }
+      case 'videos': { key='home,wait3000,home,right,ok'; break; }
       case 'direct': { key='green,ok'; break; }
-      case 'enregistrements': { key='home,wait3000,right,left,red,up,ok'; break; }
+      case 'enregistrements': { key='home,wait3000,home,up,ok'; break; }
       case 'soundDown': { key='vol_dec'; break; }
       case 'soundUp': { key='vol_inc'; break; }
       case 'programUp': { key='prgm_inc'; break; }
@@ -296,7 +306,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       console.log("[assistant-freebox] La Freebox n'est pas allumée, donc on l'allume.");
     }
 
-    return PromiseChain(keys, function(key) {
+    return PromiseChain(keys, function(key, idx) {
       // on regarde si c'est un "waitXXX"
       if (key.slice(0,4) === "wait") {
         return new Promise(function(p_res) {
@@ -306,7 +316,6 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
         })
       } else {
         var url = baseURL + key;
-        console.log("[assistant-freebox] Url => "+url);
         return new Promise(function(p_res, p_rej) {
           var delay = _this.config.delay_default||500; // defaut
           if (key.slice(0,3)==="vol") {
@@ -314,7 +323,12 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
           }
           if (Number.isInteger(key*1)) {
             delay=_this.config.delay_canal||300; // pour le changement de chaine
+            // pour canal sat il est nécessaire de faire un appui long pour changer de chaine
+            if (_this.config.use_Chaines_CANAL && idx+1 < keys.length) {
+              url += "&long=true";
+            }
           }
+          console.log("[assistant-freebox] Url => "+url);
           setTimeout(function() {
             request({url:url})
             .then(function() { p_res() })

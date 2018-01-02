@@ -46,6 +46,10 @@ Il est conseillé de réduire la zone de recherche. Par exemple, supposons que v
 
 À mettre à `true` si vous souhaitez que le lancement de la télé se fasse dans le menu `Mon Bouquet` (vos chaines favorites) plutôt que dans `Freebox TV`.
 
+### Paramètre `use_Chaines_CANAL`
+
+À mettre à `true` si vous souhaitez que le lancement de la télé se fasse dans le menu `Les chaines CANAL` plutôt que dans `Freebox TV`. En activant ce paramètre, les chaines sont numérotées pour supporter [l'ordre fourni](https://alloforfait.fr/tv/canal/) par Canal et non celui de Free.
+
 ### Paramètre `check_player_on`
 
 Celui-ci n'est à ajouter que si vous avez des problèmes lorsque le programme vérifie si la Freebox est allumée. Vérifiez d'abord que AirMedia est bien activé (comme inidqué plus haut sur cette page) et essayez de redémarrer votre box.

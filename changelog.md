@@ -1,5 +1,10 @@
 # Changelog
 
+**Change Log v2.0.4 (2 Janvier 2018)**
+
+  - Les chaines Canal sont maintenant supportées en utilisant le paramètre `use_Chaines_CANAL`
+  - Simplification des commandes envoyées pour revenir à la home (on passe de 3 commandes à 1 seule)
+
 **Change Log v2.0.3 (12 Décembre 2017)**
 
   - Il est maintenant possible de configurer le délai entre les commandes envoyées vers la Freebox
