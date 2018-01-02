@@ -100,7 +100,7 @@ Voici les phrases clés à dire — s'assurer d'avoir installé les applets asso
   - `va dans le dossier ...` ([https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox](https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox)) : parcourt tous les dossiers définis dans `search_path` (voir la section Configuration ci-dessus) afin de trouver le dossier souhaité  
     Exemples :  
     *OK Google, va dans le dossier Star Trek*  
-    *OK Google, va dans le dossier The Walking Dead* (il vous faudra prendre votre plus beau accent anglais !)
+    *OK Google, va dans le dossier The Walking Dead* (il vous faudra prendre votre plus bel accent anglais !)
 
 ## Personnalisation
 
