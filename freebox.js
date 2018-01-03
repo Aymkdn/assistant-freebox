@@ -15,7 +15,7 @@ var PromiseChain = function(arr, fct) {
 var AssistantFreebox = function(configuration) {
   this.config = configuration;
   // url pour accéder au Freebox Server
-  this.serverURL = "http://mafreebox.freebox.fr/api/v3/";
+  this.serverURL = "https://mafreebox.freebox.fr/api/v4/";
   // pour le Freebox Server
   this.freeboxServer = {
     app_id:"assistant.plugin.freebox",
@@ -33,7 +33,8 @@ AssistantFreebox.prototype.init = function(plugins) {
   return _this.checkConfiguration()
   .then(function() {
     // url pour accéder au Freebox Player
-    _this.playerURL = 'http://'+(_this.config.box_to_control||"hd1")+'.freebox.fr/pub/remote_control?code='+_this.config.code_telecommande;
+    _this.config.player_ip = _this.config.player_ip || (_this.config.box_to_control||"hd1")+'.freebox.fr';
+    _this.playerURL = 'http://'+_this.config.player_ip+'/pub/remote_control?code='+_this.config.code_telecommande;
 
     // récupération des entities
     _this.htmlEntities = require("./entities");
@@ -42,7 +43,10 @@ AssistantFreebox.prototype.init = function(plugins) {
     // on récupère les chaines Free
     console.log("[assistant-freebox] Récupération des chaines télé...");
     var url = (_this.config.use_Chaines_CANAL ? 'https://assistant.kodono.info/freebox.php?param=canalsat' : 'http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now());
-    return request(url)
+    return request({
+      url:url,
+      agentOptions:{ "rejectUnauthorized":false }
+    })
   })
   .then(function(response) {
     // on va lire le fichier replace_chaine.json qui permet de substituer certaines chaines
@@ -88,7 +92,8 @@ AssistantFreebox.prototype.getAuthorization=function() {
       "app_version": "1.0",
       "device_name": "Assistant"
     },
-    encode: "utf-8"
+    encode: "utf-8",
+    agentOptions:{ "rejectUnauthorized":false }
   };
 
   return request(options)
@@ -101,7 +106,10 @@ AssistantFreebox.prototype.getAuthorization=function() {
       // on attend que l'utilisateur accepte l'application
       var pendingAutorization = function(track_id) {
         return new Promise(function(prom_res, prom_rej) {
-          request({url:_this.serverURL+"login/authorize/"+track_id})
+          request({
+            url:_this.serverURL+"login/authorize/"+track_id,
+            agentOptions:{ "rejectUnauthorized":false }
+          })
           .then(function(response) {
             response = JSON.parse(response);
 
@@ -330,7 +338,10 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
           }
           console.log("[assistant-freebox] Url => "+url);
           setTimeout(function() {
-            request({url:url})
+            request({
+              url:url,
+              agentOptions:{ "rejectUnauthorized":false }
+            })
             .then(function() { p_res() })
             .catch(function(err) {
               if (err.message.indexOf("connect ETIMEDOUT") > -1) {
@@ -359,7 +370,10 @@ AssistantFreebox.prototype.requestSession=function() {
   var _this = this;
   if (_this.logged_in) return;
 
-  return request(_this.serverURL+"login/")
+  return request({
+    url:_this.serverURL+"login/",
+    agentOptions:{ "rejectUnauthorized":false }
+  })
   .then(function(response) {
     var body = JSON.parse(response);
     _this.freeboxServer.logged_in = body.result.logged_in;
@@ -379,7 +393,8 @@ AssistantFreebox.prototype.requestSession=function() {
          "app_version": "1.0",
          "password"   : _this.freeboxServer.password,
         },
-        encode:"utf-8"
+        encode:"utf-8",
+        agentOptions:{ "rejectUnauthorized":false }
       };
 
       return request(options)
@@ -415,7 +430,8 @@ AssistantFreebox.prototype.isPlayerOn=function() {
         "action":"stop",
         "media_type":"video"
       },
-      encode:"utf-8"
+      encode:"utf-8",
+      agentOptions:{ "rejectUnauthorized":false }
     };
     return request(options)
   })
@@ -446,7 +462,8 @@ AssistantFreebox.prototype.findFolder=function(foldertofind, path) {
       headers : {
         'X-Fbx-App-Auth' : _this.freeboxServer.session_token
       },
-      method:"GET"
+      method:"GET",
+      agentOptions:{ "rejectUnauthorized":false }
     };
     return request(options)
   })
@@ -489,7 +506,8 @@ AssistantFreebox.prototype.goToFolder=function(path) {
       headers : {
         'X-Fbx-App-Auth' : _this.freeboxServer.session_token
       },
-      method:"GET"
+      method:"GET",
+      agentOptions:{ "rejectUnauthorized":false }
     };
     return request(options)
     .then(function(response) {

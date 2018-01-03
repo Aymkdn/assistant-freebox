@@ -1,5 +1,10 @@
 # Changelog
 
+**Change Log v2.0.5 (3 Janvier 2018)**
+
+  - Ajout du paramètre `player_ip` qui permet d'indiquer l'IP de sa Freebox Player dans le cas de l'utilisation d'un VPN
+  - Passage à la v4 du protocol de la Freebox Server
+
 **Change Log v2.0.4 (2 Janvier 2018)**
 
   - Les chaines Canal sont maintenant supportées en utilisant le paramètre `use_Chaines_CANAL`

@@ -2,6 +2,8 @@
 
 Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de contrôler la Freebox Révolution.
 
+> Consulter [le changelog](https://github.com/Aymkdn/assistant-freebox/blob/master/changelog.md) pour connaitre les dernières mises à jour.
+
 **ATTENTION** : vous n'avez besoin **QUE** du plugin `assistant-freebox` pour piloter la Freebox (pas besoin de `assistant-ifttt` ou `assistant-wait`, ou autre....).  
 Le seul autre plugin que vous pouvez **ÉVENTUELLEMENT** installer, est le plugin `assistant-notifier`, et **SEULEMENT** dans le cas où vous avez un Google Home chez vous. En effet, si vous utilisez la commande vocale `va dans le dossier ...`, alors un message est envoyé au Google Home pour dire si le dossier a été trouvé ou non. Pour le moment, c'est la seule utilisation du retour vocal vers le Google Home.
 
@@ -55,6 +57,10 @@ Il est conseillé de réduire la zone de recherche. Par exemple, supposons que v
 Celui-ci n'est à ajouter que si vous avez des problèmes lorsque le programme vérifie si la Freebox est allumée. Vérifiez d'abord que AirMedia est bien activé (comme inidqué plus haut sur cette page) et essayez de redémarrer votre box.
 
 Si cela ne fonctionne pas et que le programme continue à ne pas réussir à détecter si la Freebox est allumée ou éteinte, alors vous pouvez ajouter le paramètre `check_player_on` en le mettant à la valeur `false`.
+
+### Paramètre `player_ip`
+
+Si vous utilisez un VPN sur l'ordinateur où tourne `assistant-plugins` alors le controle de la Freebox va échouer. Pour remédier à ce problème vous devez ajouter le paramètre `player_ip` dans le fichier `configuration.json` en y indiquant l'adresse IP du Freebox Player. Pour trouver cette IP vous pouvez [regarder cette vidéo](https://youtu.be/UbUXgn-_zdw).
 
 ### Paramètre `delay_default`
 
