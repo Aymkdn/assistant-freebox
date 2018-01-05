@@ -79,8 +79,8 @@ Par défaut un délai de 20 millisecondes est appliqué entre chaque envoi de co
 J'ai créé des applets IFTTT qui sont déjà disponibles. Vous pouvez donc les utiliser.
 
 Voici les phrases clés à dire — s'assurer d'avoir installé les applets associées :
-  - `allume la Freebox` ([https://ifttt.com/applets/qa8rME2N-allume-la-freebox](https://ifttt.com/applets/qa8rME2N-allume-la-freebox)) : allume simplement la Freebox
-  - `allume la télé` ([https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox)) : allume la Freebox (si elle n'est pas allumée) puis va mettre une chaine télé
+  - `allume la Freebox` ([https://ifttt.com/applets/qa8rME2N-allume-la-freebox](https://ifttt.com/applets/qa8rME2N-allume-la-freebox)) : allume **seulement** la Freebox
+  - `allume la télé` ([https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox)) : allume la Freebox **ET** va mettre une chaine télé (via Freebox TV, ou via Mon Bouquet, ou via Les Chaines CANAL selon la configuration)
   - `allume la télé et zappe sur ...` ([https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine](https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine)) : allume la Freebox (si elle n'est pas allumée) puis va mettre la chaine de télé demandée   
     Exemples :  
     *OK Google, allume la télé et zappe sur M6*  
