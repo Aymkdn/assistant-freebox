@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.7 (21 janvier 2018)**
+
+  - Correction d'un bug introduit dans la v2.0.6
+
 **Change Log v2.0.6 (21 janvier 2018)**
 
   - La commande `off` vérifie désormais que la Freebox est allumée avant d'essayer de l'éteindre

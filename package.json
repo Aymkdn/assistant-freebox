@@ -1,6 +1,6 @@
 {
   "name": "assistant-freebox",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Plugin Freebox pour un Assistant via le package assistant-plugins",
   "author": "aymkdn",
   "main":"freebox.js",

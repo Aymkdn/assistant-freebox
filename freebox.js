@@ -245,7 +245,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
   var keys=[], baseURL = this.playerURL+"&key=";
 
   // permet de retourner la clé à envoyer à la Freebox pour les commandes un peu complexe
-  var returnKey = function(cmd) {
+  var returnKey = function(cmd, usePromise) {
     switch(cmd.split(" ")[0]) {
       case 'zappe': {
         var nom = cmd.replace(/^zappe /,"").replace(/^sur /,"").toLowerCase().replace(/\s(\d)/g,"$1");
@@ -306,7 +306,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       default: { key=cmd; break; }
     }
 
-    return Promise.resolve(key);
+    return (usePromise===false?key:Promise.resolve(key));
   }
 
   // si on demande "folder"
@@ -338,7 +338,11 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       if (key) {
         // on regarde si on a une étoile (*) signifiant qu'on répète plusieurs fois la même commande
         if (key.indexOf("*") !== -1) {
-          key=key.replace(/(\w+)\*(\d+)/g, function(match, p1, p2) { var ret=Array(p2*1+1); p1=returnKey(p1); return ret.join(p1+",").slice(0,-1) });
+          key=key.replace(/(\w+)\*(\d+)/g, function(match, p1, p2) {
+            var ret=Array(p2*1+1);
+            p1=returnKey(p1, false);
+            return ret.join(p1+",").slice(0,-1)
+          });
         }
         key.split(',').forEach(function(k) {
           keys.push(k);
