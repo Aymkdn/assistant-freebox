@@ -29,6 +29,8 @@ var AssistantFreebox = function(configuration) {
 
 AssistantFreebox.prototype.init = function(plugins) {
   var _this=this;
+  var chainesFileName = 'chaines_'+(_this.config.use_Chaines_CANAL?'canal':'free')+'.json';
+  var chainesFilePath = path.join(__dirname,chainesFileName);
   _this.plugins = plugins;
   return _this.checkConfiguration()
   .then(function() {
@@ -38,41 +40,65 @@ AssistantFreebox.prototype.init = function(plugins) {
 
     // récupération des entities
     _this.htmlEntities = require("./entities");
-
     _this.chaines = {}; // pour enregistrer le nom de chaine -> numéro de chaine
-    // on récupère les chaines Free
-    console.log("[assistant-freebox] Récupération des chaines télé...");
-    var url = (_this.config.use_Chaines_CANAL ? 'https://assistant.kodono.info/freebox.php?param=canalsat' : 'http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now());
-    return request({
-      url:url,
-      agentOptions:{ "rejectUnauthorized":false }
-    })
+    // on regarde si on a une copie locale
+    try {
+      fs.accessSync(chainesFilePath, fs.constants.R_OK)
+      var stat = fs.statSync(chainesFilePath);
+      // on regarde si ça fait plus d'un mois depuis la dernière mise à jour
+      var timelaps = Date.now()-stat.mtime.getTime();
+      if (timelaps > 2419200000) throw "Rafraichissement des chaines via le Web";
+      else {
+        _this.chaines = require('./'+chainesFileName);
+        return false;
+      }
+    } catch(err) {
+      // on récupère les chaines Free
+      console.log("[assistant-freebox] Récupération des chaines télé...");
+      var url = (_this.config.use_Chaines_CANAL ? 'https://assistant.kodono.info/freebox.php?param=canalsat' : 'http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now());
+      return request({
+        url:url,
+        agentOptions:{ "rejectUnauthorized":false }
+      })
+      .catch(function() {
+        try {
+          _this.chaines = require('./chaines.json');
+        } catch(err) {
+          console.log("[assistant-freebox] ERREUR : Impossible de récupérer la liste des chaines...");
+        }
+        return null
+      })
+    }
   })
   .then(function(response) {
-    // on va lire le fichier replace_chaine.json qui permet de substituer certaines chaines
-    var substitution = require("./replace_chaine");
+    if (response) {
+      // on va lire le fichier replace_chaine.json qui permet de substituer certaines chaines
+      var substitution = require("./replace_chaine");
 
-    // puis on s'occupe de la réponse du serveur
-    var body =response.slice(9).replace(/\)\W+$/,"");
-    body = JSON.parse(body);
-    var i, chaines=[], nom, canal, slash;
-    for (i=0, len=body.chaines.length; i<len; i++) {
-      nom = _this.decodeEntities(body.chaines[i].nom);
-      // on remplace certains noms
-      nom = nom.toLowerCase().replace(/ la chaine/,"").replace(/\+/g," plus ").replace(/&/g," et ").replace(/\!/g,"").trim();
-      slash = nom.indexOf('/');
-      if (slash > -1) nom = nom.slice(0,slash);
-      nom = nom.replace(/\s+$/,"").replace(/\s(\d)/g,"$1");
-      // on fait la substitution
-      if (substitution[nom]) nom=substitution[nom];
-      if (!nom) continue;
-      canal = body.chaines[i].canal;
-      _this.chaines[nom] = canal;
+      // puis on s'occupe de la réponse du serveur
+      var body =response.slice(9).replace(/\)\W+$/,"");
+      body = JSON.parse(body);
+      var i, chaines=[], nom, canal, slash;
+      for (i=0, len=body.chaines.length; i<len; i++) {
+        nom = _this.decodeEntities(body.chaines[i].nom);
+        // on remplace certains noms
+        nom = nom.toLowerCase().replace(/ la chaine/,"").replace(/\+/g," plus ").replace(/\s+/g," ").replace(/canal plus/,"canal +").replace(/&/g," et ").replace(/\!/g,"").trim();
+        slash = nom.indexOf('/');
+        if (slash > -1) nom = nom.slice(0,slash);
+        nom = nom.replace(/\s+$/,"").replace(/\s(\d)/g,"$1");
+        // on fait la substitution
+        if (substitution[nom]) nom=substitution[nom];
+        if (!nom) continue;
+        canal = body.chaines[i].canal;
+        _this.chaines[nom] = canal;
+      }
+      // chaines manquantes
+      _this.chaines["canal +"]="4";
+      // on écrit dans le fichier local
+      fs.writeFileSync(chainesFilePath, JSON.stringify(_this.chaines, null, 2));
     }
-    // chaines manquantes
-    _this.chaines["Canal +"]="4";
 
-    console.log("[assistant-freebox] Récupération des chaines sur free.fr terminée !");
+    if (response!==null) console.log("[assistant-freebox] Récupération des chaines terminée !");
     return _this;
   })
 }
@@ -234,13 +260,27 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
             key=canal.split("").join(",")
           } else {
             console.log("[assistant-freebox] Chaine "+nom+" inconnue");
-            return;
+            return Promise.resolve("");
           }
         }
         break;
       }
-      case 'on': { key='power,wait7000'; break; }
-      case 'off': { key='power'; break; }
+      case 'on': {
+        // on vérifie si la Freebox est allumée
+        return _this.isPlayerOn()
+        .then(function(state) {
+          if (!state) return 'power,wait7000'
+          return "";
+        })
+      }
+      case 'off': {
+        // on vérifie si la Freebox est allumée
+        return _this.isPlayerOn()
+        .then(function(state) {
+          if (state) return "power"
+          return "";
+        })
+      }
       case 'tv': {
         key = 'home,wait3000,home,ok,wait4000';
         if (_this.config.use_Mon_Bouquet==true) {
@@ -266,7 +306,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       default: { key=cmd; break; }
     }
 
-    return key;
+    return Promise.resolve(key);
   }
 
   // si on demande "folder"
@@ -292,22 +332,26 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
   }
 
   // on peut avoir plusieurs commandes (séparées par une virgule) à envoyer à la Freebox
-  commande.split(',').forEach(function(key) {
-    key=returnKey(key);
-    if (key) {
-      // on regarde si on a une étoile (*) signifiant qu'on répète plusieurs fois la même commande
-      if (key.indexOf("*") !== -1) {
-        key=key.replace(/(\w+)\*(\d+)/g, function(match, p1, p2) { var ret=Array(p2*1+1); p1=returnKey(p1); return ret.join(p1+",").slice(0,-1) });
+  return PromiseChain(commande.split(','), function(key) {
+    return returnKey(key)
+    .then(function(key) {
+      if (key) {
+        // on regarde si on a une étoile (*) signifiant qu'on répète plusieurs fois la même commande
+        if (key.indexOf("*") !== -1) {
+          key=key.replace(/(\w+)\*(\d+)/g, function(match, p1, p2) { var ret=Array(p2*1+1); p1=returnKey(p1); return ret.join(p1+",").slice(0,-1) });
+        }
+        key.split(',').forEach(function(k) {
+          keys.push(k);
+        })
       }
-      key.split(',').forEach(function(k) {
-        keys.push(k);
-      })
-    }
-  });
-
-  // si la première key n'est pas 'power', alors on va vérifier que la Freebox est allumée pour effectuer l'action
-  // si elle n'est pas allumée, on l'allume
-  return (keys[0] !== "power" ? _this.isPlayerOn() : Promise.resolve(true))
+    })
+  })
+  .then(function() {
+    if (keys.length===0) throw "[assistant-freebox] Aucune action nécessaire.";
+    // si la première key n'est pas 'power', alors on va vérifier que la Freebox est allumée pour effectuer l'action
+    // si elle n'est pas allumée, on l'allume
+    return (keys[0] !== "power" ? _this.isPlayerOn() : Promise.resolve(true))
+  })
   .then(function(state) {
     if (!state) {
       keys.splice(0,0,'power','wait7000'); // on l'allume
@@ -359,6 +403,9 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
     .catch(function(err) {
       console.log(err)
     })
+  })
+  .catch(function(err) {
+    console.log(err)
   })
 }
 

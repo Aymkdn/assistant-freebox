@@ -1,5 +1,10 @@
 # Changelog
 
+**Change Log v2.0.6 (21 janvier 2018)**
+
+  - La commande `off` vérifie désormais que la Freebox est allumée avant d'essayer de l'éteindre
+  - Mise en cache des chaines TV pour éviter de les récupérer à chaque démarrage du programme
+
 **Change Log v2.0.5 (3 Janvier 2018)**
 
   - Ajout du paramètre `player_ip` qui permet d'indiquer l'IP de sa Freebox Player dans le cas de l'utilisation d'un VPN
