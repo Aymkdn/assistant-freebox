@@ -35,6 +35,7 @@ AssistantFreebox.prototype.init = function(plugins) {
   return _this.checkConfiguration()
   .then(function() {
     // url pour accéder au Freebox Player
+    _this.config.player_name = _this.config.player_name || "Freebox%20Player";
     _this.config.player_ip = _this.config.player_ip || (_this.config.box_to_control||"hd1")+'.freebox.fr';
     _this.playerURL = 'http://'+_this.config.player_ip+'/pub/remote_control?code='+_this.config.code_telecommande;
 
@@ -472,7 +473,7 @@ AssistantFreebox.prototype.isPlayerOn=function() {
   return _this.requestSession()
   .then(function() {
     var options = {
-      url:_this.serverURL+"airmedia/receivers/Freebox%20Player/",
+      url:_this.serverURL+"airmedia/receivers/"+_this.config.player_name+"/",
       headers:{
         "X-Fbx-App-Auth": _this.freeboxServer.session_token
       },

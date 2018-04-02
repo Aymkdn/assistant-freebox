@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.8 (1 avril 2018)**
+
+  - Ajout du paramètre `player_name` pour ceux qui changent le nom de leur Freebox Player (voir https://github.com/Aymkdn/assistant-plugins/issues/110)
+
 **Change Log v2.0.7 (21 janvier 2018)**
 
   - Correction d'un bug introduit dans la v2.0.6
