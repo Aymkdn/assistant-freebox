@@ -95,6 +95,7 @@ AssistantFreebox.prototype.init = function(plugins) {
       }
       // chaines manquantes
       _this.chaines["canal +"]="4";
+      _this.chaines["mosaïque"]=_this.chaines["la zéro"]="0";
       // on écrit dans le fichier local
       fs.writeFileSync(chainesFilePath, JSON.stringify(_this.chaines, null, 2));
     }

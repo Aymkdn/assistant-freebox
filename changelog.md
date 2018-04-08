@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.9 (8 avril 2018)**
+
+  - Ajout du support de la chaine Mosaïque (0) (voir https://github.com/Aymkdn/assistant-plugins/issues/124)
+
 **Change Log v2.0.8 (1 avril 2018)**
 
   - Ajout du paramètre `player_name` pour ceux qui changent le nom de leur Freebox Player (voir https://github.com/Aymkdn/assistant-plugins/issues/110)
