@@ -44,7 +44,7 @@ Par exemple, en disant *« OK Google, va dans le dossier Star Trek »*. Il va al
 
 Il est conseillé de réduire la zone de recherche. Par exemple, supposons que vous voulez seulement rechercher parmi vos séries télé qui sont stockées dans `Perso/Mes Séries/`, alors mettre `/Disque dur/Vidéos/Perso/Mes Séries/`.
 
-**Attention**, `search_path` ne fonctionne qu'avec le **disque dur de la Freebox** (cela ne fonctionne **PAS** un NAS sur le réseau). Pour se déplacer dans un disque dur/répertoire distant (type NAS), il faudra créer sa propre applet IFTTT qui donnera les commandes pour se déplacer jusque dans le dossier en question (du style `freebox_home,right,right,ok,down,ok`). Si besoin d'aide, merci de poster [un nouvel issue](https://github.com/Aymkdn/assistant-plugins/issues).
+**Attention**, `search_path` ne fonctionne qu'avec le **disque dur de la Freebox** (cela ne fonctionne **PAS** avec un disque dur sur le réseau). Pour se déplacer dans un disque dur/répertoire distant (type NAS), il faudra créer sa propre applet IFTTT qui donnera les commandes pour se déplacer jusque dans le dossier en question (du style `freebox_home,right,right,ok,down,ok`). Si besoin d'aide, merci de poster [un nouvel issue](https://github.com/Aymkdn/assistant-plugins/issues).
 
 ### Paramètre `use_Mon_Bouquet`
 
