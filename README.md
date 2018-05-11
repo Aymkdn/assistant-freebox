@@ -158,9 +158,9 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `home` : envoie la séquence `home`, `wait2000`, `red`
   - `back` : envoie la commande `red`
   - `pause` : envoie la commande `play`
-  - `videos` : envoie la séquence `home`, `wait2000`, `right`, `left`, `red`, `right`, `ok`
+  - `videos` : envoie la séquence `home`, `wait2000`, `red`, `right`, `ok`
   - `direct` : envoie la séquence `green`, `ok`
-  - `enregistrements` : envoie la séquence `home`, `wait2000`, `right`, `left`, `red`, `up`, `ok`
+  - `enregistrements` : envoie la séquence `home`, `wait2000`, `red`, `up`, `ok`
   - `soundDown` : envoie la commande `vol_dec`
   - `soundUp` : envoie la commande `vol_inc`
   - `programUp` : envoie la commande `prgm_inc`
