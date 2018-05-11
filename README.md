@@ -44,6 +44,8 @@ Par exemple, en disant *« OK Google, va dans le dossier Star Trek »*. Il va al
 
 Il est conseillé de réduire la zone de recherche. Par exemple, supposons que vous voulez seulement rechercher parmi vos séries télé qui sont stockées dans `Perso/Mes Séries/`, alors mettre `/Disque dur/Vidéos/Perso/Mes Séries/`.
 
+**Attention**, `search_path` ne fonctionne qu'avec le **disque dur de la Freebox** (cela ne fonctionne **PAS** un NAS sur le réseau). Pour se déplacer dans un disque dur/répertoire distant (type NAS), il faudra créer sa propre applet IFTTT qui donnera les commandes pour se déplacer jusque dans le dossier en question (du style `freebox_home,right,right,ok,down,ok`). Si besoin d'aide, merci de poster [un nouvel issue](https://github.com/Aymkdn/assistant-plugins/issues).
+
 ### Paramètre `use_Mon_Bouquet`
 
 À mettre à `true` si vous souhaitez que le lancement de la télé se fasse dans le menu `Mon Bouquet` (vos chaines favorites) plutôt que dans `Freebox TV`.
@@ -165,6 +167,7 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `programDown` : envoie la commande `prgm_dec`
   - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration), puis de s'y rendre
   - `zappe sur ABC` : permet de zapper sur la chaine ABC (exemple : `freebox_zappe sur la 1` ou `freebox_zappe sur TF1`)
+  - on peut aussi utiliser `*X` pour effectuer X fois la même action (exemple : `freebox_soundUp*5` équivaut à `freebox_soundUp,soundUp,soundUp,soundUp,soundUp`)
 
 ### Exemple
 
