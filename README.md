@@ -153,7 +153,7 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `waitXXXX` : enclenche un timer de XXXX millisecondes
   - `on` : envoie la séquence `power` suivi d'un timer de 7 secondes (`wait7000`)
   - `off` : envoie la commande `power`
-  - `tv` : envoie la séquence `home`, `wait2000`, `right`, `left`, `red`, `ok`, `wait4000`
+  - `tv` : envoie la séquence `home`, `wait2000`, `red`, `ok`, `wait4000`
   - `unmute` : envoie `mute`
   - `home` : envoie la séquence `home`, `wait2000`, `red`
   - `back` : envoie la commande `red`
