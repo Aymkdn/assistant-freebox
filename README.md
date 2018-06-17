@@ -10,7 +10,7 @@ Le seul autre plugin que vous pouvez **ÉVENTUELLEMENT** installer, est le plugi
 ## Sommaire
 
   - [Installation](#installation)
-  - [Configuration]#configuration)
+  - [Configuration](#configuration)
   - [Utilisation](#utilisation)
   - [Personnalisation](#personnalisation)
   - [Commandes](#commandes)
@@ -91,13 +91,14 @@ Par défaut un délai de 20 millisecondes est appliqué entre chaque envoi de co
 
 ## Utilisation
 
-J'ai créé des applets IFTTT pour le **Google Home** qui sont déjà disponibles. Vous pouvez donc les utiliser si vous utilisez un **Gogle Home**.
+J'ai créé des applets IFTTT pour vous faciliter la tâche.
 
 Voici les phrases clés à dire — s'assurer d'avoir installé les applets associées :
   - `allume la Freebox` : allume **seulement** la Freebox  
-    → Applet pour Google Home : [https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home](https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana](https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa](https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa)
+    - Applet pour **Google Home** : [https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home](https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana](https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa](https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa)
+    
   - `allume la télé` : allume la Freebox **ET** va mettre une chaine télé (via Freebox TV, ou via Mon Bouquet, ou via Les Chaines CANAL selon la configuration)  
     → Applet pour Google Home : [https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home)  
     → Applet pour Cortana : [https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana](https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana)  
