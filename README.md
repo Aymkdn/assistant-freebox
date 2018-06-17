@@ -173,18 +173,18 @@ Il est également possible de créer ses propres applets et commandes pour pilot
 
 Il faut pour cela procéder ainsi :
 
-  1) Créer une nouvelle *applet* dans IFTTT : [https://ifttt.com/create](https://ifttt.com/create)  
-  2) Cliquer sur **this** puis choisir **Google Assistant** (ou **Amazon Alexa** ou **Cortana**)  
-  3) Choisir la carte **Say a simple phrase** (ou autre, selon votre cas)  
-  4) Dans *« What do you want to say? »* mettre la phrase qui va déclencher l'action  
-  5) Remplir les autres champs de la carte  
-  6) Maintenant, cliquer sur **that** puis choisir **Pushbullet**  
-  7) Choisir la carte **Push a Note**  
-  8) Dans le champs *« Title »*, mettre `Assistant`  
-  9) Dans le champs *« Message »*, mettre `freebox_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule) (voir plus bas)  
-  10) Enregistrer puis cliquer sur **Finish**  
-  11) Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
-  12) Votre assistant devrait s'exécuter
+  1. Créer une nouvelle *applet* dans IFTTT : [https://ifttt.com/create](https://ifttt.com/create)  
+  2. Cliquer sur **this** puis choisir **Google Assistant** (ou **Amazon Alexa** ou **Cortana**)  
+  3. Choisir la carte **Say a simple phrase** (ou autre, selon votre cas)  
+  4. Dans *« What do you want to say? »* mettre la phrase qui va déclencher l'action  
+  5. Remplir les autres champs de la carte  
+  6. Maintenant, cliquer sur **that** puis choisir **Pushbullet**  
+  7. Choisir la carte **Push a Note**  
+  8. Dans le champs *« Title »*, mettre `Assistant`  
+  9. Dans le champs *« Message »*, mettre `freebox_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule) (voir plus bas)  
+  10. Enregistrer puis cliquer sur **Finish**  
+  11. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
+  12. Votre assistant devrait s'exécuter
 
 ### Commandes
 
@@ -229,12 +229,3 @@ Par exemple, supposons que vous avez un enregistrement journalier (disons l'émi
 Pour cela vous souhaitez donner la commande : *OK Google, lance le programme Quotidien*
 
 Il faut donc créer une applet IFTTT (comme décrit plus haut) et pour la commande envoyée à Pushbullet vous mettrez : `freebox_enregistrements,wait7000,ok,ok` qui peut se traduire par `Freebox, va dans Mes Enregistrements, puis patiente 7 secondes, et ensuite appuie sur OK, puis OK encore une fois`
-
-<style>
-#contenu > ul > li > p {
-  margin-bottom: 0;
-}
-#contenu > ul > li {
-  margin-top: 15px;
-}
-</style>
