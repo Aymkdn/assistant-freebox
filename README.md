@@ -99,6 +99,7 @@ Voici les phrases clés à dire — s'assurer d'avoir installé les applets asso
     - Applet pour **Cortana** : [https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana](https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana)  
     - Applet pour **Alexa** : [https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa](https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa)
     
+    
   - `allume la télé` : allume la Freebox **ET** va mettre une chaine télé (via Freebox TV, ou via Mon Bouquet, ou via Les Chaines CANAL selon la configuration)  
     → Applet pour Google Home : [https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home)  
     → Applet pour Cortana : [https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana](https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana)  
