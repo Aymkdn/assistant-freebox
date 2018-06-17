@@ -99,72 +99,71 @@ Voici les phrases clés à dire — s'assurer d'avoir installé les applets asso
     - Applet pour **Cortana** : [https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana](https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana)  
     - Applet pour **Alexa** : [https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa](https://ifttt.com/applets/rKJrQV3k-allume-la-freebox-avec-alexa)
     
-    
   - `allume la télé` : allume la Freebox **ET** va mettre une chaine télé (via Freebox TV, ou via Mon Bouquet, ou via Les Chaines CANAL selon la configuration)  
-    → Applet pour Google Home : [https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana](https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/ZX7YPsQN-allume-la-tele-via-la-freebox-avec-alexa](https://ifttt.com/applets/ZX7YPsQN-allume-la-tele-via-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home](https://ifttt.com/applets/tuKQJrnH-allume-la-tele-via-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana](https://ifttt.com/applets/cXdpPSvs-allume-la-tele-via-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/ZX7YPsQN-allume-la-tele-via-la-freebox-avec-alexa](https://ifttt.com/applets/ZX7YPsQN-allume-la-tele-via-la-freebox-avec-alexa)  
   - `allume la télé et zappe sur ...` : allume la Freebox (si elle n'est pas allumée) puis va mettre la chaine de télé demandée   
     Exemples :  
     *OK Google, allume la télé et zappe sur M6*  
     *OK Google, allume la télé et zappe sur la 6*  
-    → Applet pour Google Home : [https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-google-home](https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/dGnuaQ5H-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-cortana](https://ifttt.com/applets/dGnuaQ5H-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-cortana)  
-    → Applet pour Alexa : *non disponible*  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-google-home](https://ifttt.com/applets/Bj6nH7Xw-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/dGnuaQ5H-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-cortana](https://ifttt.com/applets/dGnuaQ5H-allume-la-tele-via-la-freebox-et-zappe-sur-une-chaine-avec-cortana)  
+    - Applet pour **Alexa** : *non disponible*  
   - `éteins la Freebox` : pour éteindre la Freebox
-    → Applet pour Google Home : [https://ifttt.com/applets/EEn7LsPJ-eteins-la-freebox-avec-google-home](https://ifttt.com/applets/EEn7LsPJ-eteins-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/cnKUZTqR-eteins-la-freebox-avec-cortana](https://ifttt.com/applets/cnKUZTqR-eteins-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/EGKDfuN7-eteins-la-freebox-avec-alexa](https://ifttt.com/applets/EGKDfuN7-eteins-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/EEn7LsPJ-eteins-la-freebox-avec-google-home](https://ifttt.com/applets/EEn7LsPJ-eteins-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/cnKUZTqR-eteins-la-freebox-avec-cortana](https://ifttt.com/applets/cnKUZTqR-eteins-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/EGKDfuN7-eteins-la-freebox-avec-alexa](https://ifttt.com/applets/EGKDfuN7-eteins-la-freebox-avec-alexa)  
   - `zappe sur ...` : zappe sur la chaine demandée, et fonctionne aussi avec le numéro de la chaine  
    Exemples :  
     *OK Google, zappe sur TMC*  
     *OK Google, zappe sur la 10*  
-    → Applet pour Google Home : [https://ifttt.com/applets/d6B7Yrk5-zappe-sur-une-chaine-de-la-freebox-avec-google-home](https://ifttt.com/applets/d6B7Yrk5-zappe-sur-une-chaine-de-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/GYbGcZ4B-zappe-sur-une-chaine-de-la-freebox-avec-cortana](https://ifttt.com/applets/GYbGcZ4B-zappe-sur-une-chaine-de-la-freebox-avec-cortana)  
-    → Applet pour Alexa : *Alexa* est très limitée niveau personnalisation... Du coup il faut une applet par chaine ! Voici quelques applets déjà créées pour vous : [Zappe sur TF1](https://ifttt.com/applets/adHi6jzc-zappe-sur-tf1-via-la-freebox-avec-alexa), [Zappe sur France 2](https://ifttt.com/applets/E6utqUBs-zappe-sur-france-2-via-la-freebox-avec-alexa), [Zappe sur France 3](https://ifttt.com/applets/cWsuGS9a-zappe-sur-france-3-via-la-freebox-avec-alexa), [Zappe sur Canal+](https://ifttt.com/applets/rwPvTmtS-zappe-sur-canal-via-la-freebox-avec-alexa), [Zappe sur France 5](https://ifttt.com/applets/xy8kNvxB-zappe-sur-france-5-via-la-freebox-avec-alexa), [Zappe sur M6](https://ifttt.com/applets/TYQ7xP6T-zappe-sur-m6-via-la-freebox-avec-alexa), [Zappe sur Arte](https://ifttt.com/applets/Q4qcsCx2-zappe-sur-arte-via-la-freebox-avec-alexa), [Zappe sur C8](https://ifttt.com/applets/pQW6Jbi2-zappe-sur-c8-via-la-freebox-avec-alexa), [Zappe sur W9](https://ifttt.com/applets/uNG29uyk-zappe-sur-w9-via-la-freebox-avec-alexa), [Zappe sur TMC](https://ifttt.com/applets/AQ8FmhZW-zappe-sur-tmc-via-la-freebox-avec-alexa), [Zappe sur TFX](https://ifttt.com/applets/bsXWbrhn-zappe-sur-tfx-via-la-freebox-avec-alexa), [Zappe sur NRJ12](https://ifttt.com/applets/KzAQBnFf-zappe-sur-nrj12-via-la-freebox-avec-alexa), [Zappe sur LCP](https://ifttt.com/applets/rqSP857v-zappe-sur-lcp-via-la-freebox-avec-alexa), [Zappe sur France 4](https://ifttt.com/applets/mEyWMqNQ-zappe-sur-france-4-via-la-freebox-avec-alexa), [Zappe sur BFM](https://ifttt.com/applets/sW5w8Xc7-zappe-sur-bfm-tv-via-la-freebox-avec-alexa), [Zappe sur Gulli](https://ifttt.com/applets/RzPrXSVx-zappe-sur-gulli-via-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/d6B7Yrk5-zappe-sur-une-chaine-de-la-freebox-avec-google-home](https://ifttt.com/applets/d6B7Yrk5-zappe-sur-une-chaine-de-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/GYbGcZ4B-zappe-sur-une-chaine-de-la-freebox-avec-cortana](https://ifttt.com/applets/GYbGcZ4B-zappe-sur-une-chaine-de-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : *Alexa* est très limitée niveau personnalisation... Du coup il faut une applet par chaine ! Voici quelques applets déjà créées pour vous : [Zappe sur TF1](https://ifttt.com/applets/adHi6jzc-zappe-sur-tf1-via-la-freebox-avec-alexa), [Zappe sur France 2](https://ifttt.com/applets/E6utqUBs-zappe-sur-france-2-via-la-freebox-avec-alexa), [Zappe sur France 3](https://ifttt.com/applets/cWsuGS9a-zappe-sur-france-3-via-la-freebox-avec-alexa), [Zappe sur Canal+](https://ifttt.com/applets/rwPvTmtS-zappe-sur-canal-via-la-freebox-avec-alexa), [Zappe sur France 5](https://ifttt.com/applets/xy8kNvxB-zappe-sur-france-5-via-la-freebox-avec-alexa), [Zappe sur M6](https://ifttt.com/applets/TYQ7xP6T-zappe-sur-m6-via-la-freebox-avec-alexa), [Zappe sur Arte](https://ifttt.com/applets/Q4qcsCx2-zappe-sur-arte-via-la-freebox-avec-alexa), [Zappe sur C8](https://ifttt.com/applets/pQW6Jbi2-zappe-sur-c8-via-la-freebox-avec-alexa), [Zappe sur W9](https://ifttt.com/applets/uNG29uyk-zappe-sur-w9-via-la-freebox-avec-alexa), [Zappe sur TMC](https://ifttt.com/applets/AQ8FmhZW-zappe-sur-tmc-via-la-freebox-avec-alexa), [Zappe sur TFX](https://ifttt.com/applets/bsXWbrhn-zappe-sur-tfx-via-la-freebox-avec-alexa), [Zappe sur NRJ12](https://ifttt.com/applets/KzAQBnFf-zappe-sur-nrj12-via-la-freebox-avec-alexa), [Zappe sur LCP](https://ifttt.com/applets/rqSP857v-zappe-sur-lcp-via-la-freebox-avec-alexa), [Zappe sur France 4](https://ifttt.com/applets/mEyWMqNQ-zappe-sur-france-4-via-la-freebox-avec-alexa), [Zappe sur BFM](https://ifttt.com/applets/sW5w8Xc7-zappe-sur-bfm-tv-via-la-freebox-avec-alexa), [Zappe sur Gulli](https://ifttt.com/applets/RzPrXSVx-zappe-sur-gulli-via-la-freebox-avec-alexa)  
   - `coupe le son de la Freebox` :  
-    → Applet pour Google Home : [https://ifttt.com/applets/kx4Ku7vj-coupe-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/kx4Ku7vj-coupe-le-son-de-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/Li7Esmfr-coupe-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/Li7Esmfr-coupe-le-son-de-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/LB7dzMQj-coupe-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/LB7dzMQj-coupe-le-son-de-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/kx4Ku7vj-coupe-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/kx4Ku7vj-coupe-le-son-de-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/Li7Esmfr-coupe-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/Li7Esmfr-coupe-le-son-de-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/LB7dzMQj-coupe-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/LB7dzMQj-coupe-le-son-de-la-freebox-avec-alexa)  
   - `remets le son de la Freebox` :  
-    → Applet pour Google Home : [https://ifttt.com/applets/S4wcuJn7-remets-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/S4wcuJn7-remets-le-son-de-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/ZAuewVNJ-remets-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/ZAuewVNJ-remets-le-son-de-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/dNyUKmwA-remets-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/dNyUKmwA-remets-le-son-de-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/S4wcuJn7-remets-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/S4wcuJn7-remets-le-son-de-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/ZAuewVNJ-remets-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/ZAuewVNJ-remets-le-son-de-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/dNyUKmwA-remets-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/dNyUKmwA-remets-le-son-de-la-freebox-avec-alexa)  
   - `baisse le son de la Freebox` : va baisser le son de 15 barres  
-    → Applet pour Google Home : [https://ifttt.com/applets/WWf3zG58-baisse-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/WWf3zG58-baisse-le-son-de-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/wNHpPQhi-baisse-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/wNHpPQhi-baisse-le-son-de-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/RUdArmZg-baisse-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/RUdArmZg-baisse-le-son-de-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/WWf3zG58-baisse-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/WWf3zG58-baisse-le-son-de-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/wNHpPQhi-baisse-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/wNHpPQhi-baisse-le-son-de-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/RUdArmZg-baisse-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/RUdArmZg-baisse-le-son-de-la-freebox-avec-alexa)  
   - `monte le son de la Freebox` : va augmenter le son de 15 barres  
-    → Applet pour Google Home : [https://ifttt.com/applets/uCcg6RdE-augmente-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/uCcg6RdE-augmente-le-son-de-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/vNrYRmbF-augmente-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/vNrYRmbF-augmente-le-son-de-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/a9Tp7eiv-augmente-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/a9Tp7eiv-augmente-le-son-de-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/uCcg6RdE-augmente-le-son-de-la-freebox-avec-google-home](https://ifttt.com/applets/uCcg6RdE-augmente-le-son-de-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/vNrYRmbF-augmente-le-son-de-la-freebox-avec-cortana](https://ifttt.com/applets/vNrYRmbF-augmente-le-son-de-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/a9Tp7eiv-augmente-le-son-de-la-freebox-avec-alexa](https://ifttt.com/applets/a9Tp7eiv-augmente-le-son-de-la-freebox-avec-alexa)  
   - `mets la Freebox sur pause` : met le programme en cours sur pause  
-    → Applet pour Google Home : [https://ifttt.com/applets/N7um4qJU-mets-la-freebox-sur-pause-avec-google-home](https://ifttt.com/applets/N7um4qJU-mets-la-freebox-sur-pause-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/QjnXPHhx-mets-la-freebox-sur-pause-avec-cortana](https://ifttt.com/applets/QjnXPHhx-mets-la-freebox-sur-pause-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/hLzYfKZw-mets-la-freebox-sur-pause-avec-alexa](https://ifttt.com/applets/hLzYfKZw-mets-la-freebox-sur-pause-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/N7um4qJU-mets-la-freebox-sur-pause-avec-google-home](https://ifttt.com/applets/N7um4qJU-mets-la-freebox-sur-pause-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/QjnXPHhx-mets-la-freebox-sur-pause-avec-cortana](https://ifttt.com/applets/QjnXPHhx-mets-la-freebox-sur-pause-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/hLzYfKZw-mets-la-freebox-sur-pause-avec-alexa](https://ifttt.com/applets/hLzYfKZw-mets-la-freebox-sur-pause-avec-alexa)  
   - `remets la Freebox en lecture` : remet en lecture le programme en cours  
-    → Applet pour Google Home : [https://ifttt.com/applets/mHAXMym9-remets-la-freebox-en-lecture-avec-google-home](https://ifttt.com/applets/mHAXMym9-remets-la-freebox-en-lecture-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/PZQWJvbY-remets-la-freebox-en-lecture-avec-cortana](https://ifttt.com/applets/PZQWJvbY-remets-la-freebox-en-lecture-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/nTbmH7yB-remets-la-freebox-en-lecture-avec-alexa](https://ifttt.com/applets/nTbmH7yB-remets-la-freebox-en-lecture-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/mHAXMym9-remets-la-freebox-en-lecture-avec-google-home](https://ifttt.com/applets/mHAXMym9-remets-la-freebox-en-lecture-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/PZQWJvbY-remets-la-freebox-en-lecture-avec-cortana](https://ifttt.com/applets/PZQWJvbY-remets-la-freebox-en-lecture-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/nTbmH7yB-remets-la-freebox-en-lecture-avec-alexa](https://ifttt.com/applets/nTbmH7yB-remets-la-freebox-en-lecture-avec-alexa)  
   - `reviens au direct` : lorsque la Freebox TV a été mise sur pause et qu'on souhaite revenir au direct  
-    → Applet pour Google Home : [https://ifttt.com/applets/zfSALsrD-remets-le-direct-sur-la-freebox-avec-google-home](https://ifttt.com/applets/zfSALsrD-remets-le-direct-sur-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/XVJNLK3R-remets-le-direct-sur-la-freebox-avec-cortana](https://ifttt.com/applets/XVJNLK3R-remets-le-direct-sur-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/vn8TXFdM-remets-le-direct-sur-la-freebox-avec-alexa](https://ifttt.com/applets/vn8TXFdM-remets-le-direct-sur-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/zfSALsrD-remets-le-direct-sur-la-freebox-avec-google-home](https://ifttt.com/applets/zfSALsrD-remets-le-direct-sur-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/XVJNLK3R-remets-le-direct-sur-la-freebox-avec-cortana](https://ifttt.com/applets/XVJNLK3R-remets-le-direct-sur-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/vn8TXFdM-remets-le-direct-sur-la-freebox-avec-alexa](https://ifttt.com/applets/vn8TXFdM-remets-le-direct-sur-la-freebox-avec-alexa)  
   - `va dans Mes Enregistrements` : pour aller dans le menu "Mes Enregistrements" de la Freebox  
-    → Applet pour Google Home : [https://ifttt.com/applets/KxHGy7vw-va-dans-mes-enregistrements-sur-la-freebox-avec-google-home](https://ifttt.com/applets/KxHGy7vw-va-dans-mes-enregistrements-sur-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/DezNiJ2j-va-dans-mes-enregistrements-sur-la-freebox-avec-cortana](https://ifttt.com/applets/DezNiJ2j-va-dans-mes-enregistrements-sur-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/fw2idaur-va-dans-mes-enregistrements-sur-la-freebox-avec-alexa](https://ifttt.com/applets/fw2idaur-va-dans-mes-enregistrements-sur-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/KxHGy7vw-va-dans-mes-enregistrements-sur-la-freebox-avec-google-home](https://ifttt.com/applets/KxHGy7vw-va-dans-mes-enregistrements-sur-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/DezNiJ2j-va-dans-mes-enregistrements-sur-la-freebox-avec-cortana](https://ifttt.com/applets/DezNiJ2j-va-dans-mes-enregistrements-sur-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/fw2idaur-va-dans-mes-enregistrements-sur-la-freebox-avec-alexa](https://ifttt.com/applets/fw2idaur-va-dans-mes-enregistrements-sur-la-freebox-avec-alexa)  
   - `va dans Mes Vidéos` : pour aller dans le menu "Mes Vidéos" de la Freebox  
-    → Applet pour Google Home : [https://ifttt.com/applets/ZkWauBKi-va-dans-mes-videos-sur-la-freebox-avec-google-home](https://ifttt.com/applets/ZkWauBKi-va-dans-mes-videos-sur-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/puaEkfRb-va-dans-mes-videos-sur-la-freebox-avec-cortana](https://ifttt.com/applets/puaEkfRb-va-dans-mes-videos-sur-la-freebox-avec-cortana)  
-    → Applet pour Alexa : [https://ifttt.com/applets/SLvCeDFB-va-dans-mes-videos-sur-la-freebox-avec-alexa](https://ifttt.com/applets/SLvCeDFB-va-dans-mes-videos-sur-la-freebox-avec-alexa)  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/ZkWauBKi-va-dans-mes-videos-sur-la-freebox-avec-google-home](https://ifttt.com/applets/ZkWauBKi-va-dans-mes-videos-sur-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/puaEkfRb-va-dans-mes-videos-sur-la-freebox-avec-cortana](https://ifttt.com/applets/puaEkfRb-va-dans-mes-videos-sur-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : [https://ifttt.com/applets/SLvCeDFB-va-dans-mes-videos-sur-la-freebox-avec-alexa](https://ifttt.com/applets/SLvCeDFB-va-dans-mes-videos-sur-la-freebox-avec-alexa)  
   - `va dans le dossier ...` : parcourt tous les dossiers définis dans `search_path` (voir la section Configuration ci-dessus) afin de trouver le dossier souhaité  
     Exemples :  
     *OK Google, va dans le dossier Star Trek*  
     *OK Google, va dans le dossier The Walking Dead* (il vous faudra prendre votre plus bel accent anglais !)
-    → Applet pour Google Home : [https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox-avec-google-home](https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox-avec-google-home)  
-    → Applet pour Cortana : [https://ifttt.com/applets/aiYERDBQ-va-dans-un-dossier-stocke-sur-la-freebox-avec-cortana](https://ifttt.com/applets/aiYERDBQ-va-dans-un-dossier-stocke-sur-la-freebox-avec-cortana)  
-    → Applet pour Alexa : *non disponible*  
+    - Applet pour **Google Home** : [https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox-avec-google-home](https://ifttt.com/applets/bbdEPtcx-va-dans-un-dossier-stocke-sur-la-freebox-avec-google-home)  
+    - Applet pour **Cortana** : [https://ifttt.com/applets/aiYERDBQ-va-dans-un-dossier-stocke-sur-la-freebox-avec-cortana](https://ifttt.com/applets/aiYERDBQ-va-dans-un-dossier-stocke-sur-la-freebox-avec-cortana)  
+    - Applet pour **Alexa** : *non disponible*  
 
 Une applet ne fonctionne pas ? [Merci de me prévenir](https://github.com/Aymkdn/assistant-plugins/issues) !
 
@@ -230,3 +229,12 @@ Par exemple, supposons que vous avez un enregistrement journalier (disons l'émi
 Pour cela vous souhaitez donner la commande : *OK Google, lance le programme Quotidien*
 
 Il faut donc créer une applet IFTTT (comme décrit plus haut) et pour la commande envoyée à Pushbullet vous mettrez : `freebox_enregistrements,wait7000,ok,ok` qui peut se traduire par `Freebox, va dans Mes Enregistrements, puis patiente 7 secondes, et ensuite appuie sur OK, puis OK encore une fois`
+
+<style>
+#contenu > ul > li > p {
+  margin-bottom: 0;
+}
+#contenu > ul > li {
+  margin-top: 15px;
+}
+</style>
