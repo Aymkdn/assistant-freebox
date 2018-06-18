@@ -93,7 +93,7 @@ Par défaut un délai de 20 millisecondes est appliqué entre chaque envoi de co
 
 J'ai créé des applets IFTTT pour vous faciliter la tâche.
 
-Voici les phrases clés à dire — s'assurer d'avoir installé les applets associées :
+Voici les phrases clés à dire — s'assurer d'avoir installé les applets associées (pour *Alexa* il faudra dire `Alexa déclenche` suivi de la phrasé-clé) :
   - `allume la Freebox` : allume **seulement** la Freebox  
     - Applet pour **Google Home** : [https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home](https://ifttt.com/applets/qa8rME2N-allume-la-freebox-avec-google-home)  
     - Applet pour **Cortana** : [https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana](https://ifttt.com/applets/tMBkrH6X-allume-la-freebox-avec-cortana)  
