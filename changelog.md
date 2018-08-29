@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.10 (29 août 2018)**
+
+  - Ajout du paramètre `server_ip` qui permet d'indiquer l'IP de son Freebox Server dans le cas de l'utilisation d'un VPN (voir https://github.com/Aymkdn/assistant-plugins/issues/169)
+
 **Change Log v2.0.9 (8 avril 2018)**
 
   - Ajout du support de la chaine Mosaïque (0) (voir https://github.com/Aymkdn/assistant-plugins/issues/124)

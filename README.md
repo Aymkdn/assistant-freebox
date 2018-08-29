@@ -73,6 +73,10 @@ Si cela ne fonctionne pas et que le programme continue à ne pas réussir à dé
 
 Si vous utilisez un VPN sur l'ordinateur où tourne `assistant-plugins` alors le controle de la Freebox va échouer. Pour remédier à ce problème vous devez ajouter le paramètre `player_ip` dans le fichier `configuration.json` en y indiquant l'adresse IP du Freebox Player. Pour trouver cette IP vous pouvez [regarder cette vidéo](https://youtu.be/UbUXgn-_zdw).
 
+### Paramètre `server_ip`
+
+Si vous utilisez un VPN sur l'ordinateur où tourne `assistant-plugins` alors le controle de la Freebox pourrait échouer. Si vous avez déjà ajouté le paramètre `player_ip` (ci-dessus), alors vous devez aussi fournir l'IP de la Freebox Serveur dans le fichier `configuration.json`. Par défaut cette IP est **192.168.0.254**.
+
 ### Paramètre `player_name`
 
 Si vous avez changé le nom réseau du Freebox Player, vous pouvez utiliser ce paramètre pour le renseigner (voir [ce lien pour plus d'informations](https://github.com/Aymkdn/assistant-plugins/issues/110)).

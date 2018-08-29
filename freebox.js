@@ -15,7 +15,7 @@ var PromiseChain = function(arr, fct) {
 var AssistantFreebox = function(configuration) {
   this.config = configuration;
   // url pour accéder au Freebox Server
-  this.serverURL = "https://mafreebox.freebox.fr/api/v4/";
+  this.serverURL = "https://"+(this.config.server_ip||"mafreebox.freebox.fr")+"/api/v4/";
   // pour le Freebox Server
   this.freeboxServer = {
     app_id:"assistant.plugin.freebox",
