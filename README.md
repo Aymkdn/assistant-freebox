@@ -224,6 +224,7 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `programDown` : envoie la commande `prgm_dec`
   - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration), puis de s'y rendre
   - `zappe sur ABC` ou `zappe sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 (exemple : `freebox_zappe sur la 1` ou `freebox_zappe sur TF1`)
+  - `zappelong sur ABC` ou `zappelong sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 en faisant un appui long sur la touche (typiquement cela est utilisé pour le changement de chaine dans "Les Chaines Canal")
   - on peut aussi utiliser `*X` pour effectuer X fois la même action (exemple : `freebox_soundUp*5` équivaut à `freebox_soundUp,soundUp,soundUp,soundUp,soundUp`)
 
 ### Exemple

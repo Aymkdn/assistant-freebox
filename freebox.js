@@ -245,12 +245,16 @@ AssistantFreebox.prototype.action = function(commande) {
 AssistantFreebox.prototype.executeCommand=function(commande) {
   var _this=this;
   var keys=[], baseURL = this.playerURL+"&key=";
+  var longPress = this.config.use_Chaines_CANAL;
 
   // permet de retourner la clé à envoyer à la Freebox pour les commandes un peu complexe
   var returnKey = function(cmd, usePromise) {
     switch(cmd.split(" ")[0]) {
+      case 'zappelong':{
+        longPress = true; // on va forcer l'appui long pour le changement de chaine, même si use_Chaines_CANAL n'est pas défini
+      }
       case 'zappe': {
-        var nom = cmd.replace(/^zappe /,"").replace(/^sur /,"").toLowerCase().replace(/\s(\d)/g,"$1");
+        var nom = cmd.replace(/^zappe(long)? /,"").replace(/^sur /,"").toLowerCase().replace(/\s(\d)/g,"$1");
         var canal;
         // si on a "la#" ça signifie qu'on a appelé un nombre
         if (/la\d+/.test(nom)) {
@@ -382,7 +386,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
           if (Number.isInteger(key*1)) {
             delay=_this.config.delay_canal||300; // pour le changement de chaine
             // pour canal sat il est nécessaire de faire un appui long pour changer de chaine
-            if (_this.config.use_Chaines_CANAL && idx+1 < keys.length) {
+            if (longPress && idx+1 < keys.length) {
               url += "&long=true";
             }
           }
