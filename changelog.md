@@ -3,7 +3,7 @@
 **Change Log v2.0.11 (1 décembre 2018)**
 
   - Ajout de la commande `zappelong` (voir https://github.com/Aymkdn/assistant-plugins/issues/194)
-  
+
 **Change Log v2.0.10 (29 août 2018)**
 
   - Ajout du paramètre `server_ip` qui permet d'indiquer l'IP de son Freebox Server dans le cas de l'utilisation d'un VPN (voir https://github.com/Aymkdn/assistant-plugins/issues/169)
