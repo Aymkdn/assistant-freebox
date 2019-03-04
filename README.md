@@ -220,7 +220,7 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `musiques` : permet d'aller dans "Mes Musiques"
   - `enregistrements` : permet d'aller dans "Mes enregistrements" (envoie la séquence `home`, `wait2000`, `red`, `up`, `ok`)
   - `direct` : remet le direct (envoie la séquence `green`, `ok`)
-  - `soundDown` : baisse de son de 1 point (envoie la commande `vol_dec`)
+  - `soundDown` : baisse le son de 1 point (envoie la commande `vol_dec`)
   - `soundUp` : augmente le son de 1 point (envoie la commande `vol_inc`)
   - `soundLongDown` : baisse le son de 30 points (utile pour ceux qui utilisent des barres de son) (envoie la commande `vol_dec` en simulant un appui long)
   - `soundLongUp` : augmente le son de 30 points (utile pour ceux qui utilisent des barres de son) (envoie la commande `vol_inc` en simulant un appui long)
