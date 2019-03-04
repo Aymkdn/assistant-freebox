@@ -226,10 +226,9 @@ Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc le
   - `soundLongUp` : augmente le son de 30 points (utile pour ceux qui utilisent des barres de son) (envoie la commande `vol_inc` en simulant un appui long)
   - `programUp` : changement de chaine (envoie la commande `prgm_inc`)
   - `programDown` : changement de chaine (envoie la commande `prgm_dec`)
-  - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration), puis de s'y rendre
-     - `folder{/Disque dur/Musiques/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Musiques` et de s'y rendre
-     - `folder{/Disque dur/Photos/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Photos` et de s'y rendre
-     - `folder{/Disque dur/Vidéos/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Vidéos` et de s'y rendre
+  - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration, et qui fonctionne avec "Mes Vidéos"), puis de s'y rendre
+     - `folder{/Disque dur/Musiques/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Musiques` et de s'y rendre (utilisation avec "Mes Musiques")
+     - `folder{/Disque dur/Photos/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Photos` et de s'y rendre (utilisation avec "Mes Photos")
   - `zappe sur ABC` ou `zappe sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 (exemple : `freebox_zappe sur la 1` ou `freebox_zappe sur TF1`)
   - `zappelong sur ABC` ou `zappelong sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 en faisant un appui long sur la touche (typiquement cela est utilisé pour le changement de chaine dans "Les Chaines Canal")
   - on peut aussi utiliser `*X` pour effectuer X fois la même action (exemple : `freebox_soundUp*5` équivaut à `freebox_soundUp,soundUp,soundUp,soundUp,soundUp`)
