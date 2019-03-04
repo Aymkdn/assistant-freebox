@@ -47,7 +47,7 @@ Par défaut c'est la box dénommée `hd1` qui est pilotée, mais il arrive que c
 
 ### Paramètre `search_path`
 
-Une des fonctionnalités est la possibilité de se déplacer dans un dossier de la Freebox.
+Une des fonctionnalités est la possibilité de se déplacer dans un dossier de la Freebox qui se trouve dans **"Mes Vidéos"**.
 
 Par exemple, en disant *« OK Google, va dans le dossier Star Trek »*. Il va alors fouiller dans la zone indiquée par `search_path` (qui est `/Disque dur/Vidéos/` qui est `Mes Vidéos` dans le menu de la Freebox).
 
@@ -194,35 +194,42 @@ Il faut pour cela procéder ainsi :
 
 Dans l'étape 9) précédente, vous devez y indiquer une commande. Voici donc les commandes disponibles :
 
-  - `red` : envoie la commande `red` (touche rouge de la télécommande)
-  - `yellow` : envoie la commande `yellow` (touche jaune de la télécommande)
-  - `blue` : envoie la commande `blue` (touche bleue de la télécommande)
-  - `green` : envoie la commande `green` (touche verte de la télécommande)
-  - `up` : envoie la commande `up` (flèche haut)
-  - `down` : envoie la commande `down` (flèche bas)
-  - `left` : envoie la commande `left` (flèche gauche)
-  - `right` : envoie la commande `right` (flèche droite)
+  - `red` : touche rouge de la télécommande (envoie la commande `red`)
+  - `yellow` : touche jaune de la télécommande (envoie la commande `yellow`)
+  - `blue` : touche bleue de la télécommande (envoie la commande `blue`)
+  - `green` : touche verte de la télécommande (envoie la commande `green`)
+  - `up` : flèche haut (envoie la commande `up`)
+  - `down` : flèche bas (envoie la commande `down`)
+  - `left` : flèche gauche (envoie la commande `left`)
+  - `right` : flèche droite (envoie la commande `right`)
   - `OK` : envoie la commande `OK`
-  - `mute` : envoie la commande `mute` (sourdine)
-  - `play` : envoie la commande `play`
-  - `fwd` : envoie la commande `fwd` (avance rapide)
-  - `bwd` : envoie la commande `bwd` (retour rapide)
+  - `mute` : sourdine (envoie la commande `mute`)
+  - `play` : lecture (envoie la commande `play`)
+  - `fwd` : avance rapide (envoie la commande `fwd`)
+  - `bwd` : retour rapide (envoie la commande `bwd`)
   - `waitXXXX` : enclenche un timer de XXXX millisecondes
-  - `on` : envoie la séquence `power` suivi d'un timer de 7 secondes (`wait7000`)
+  - `on` : allume la Freebox (envoie la séquence `power` suivi d'un timer de 7 secondes (`wait7000`))
   - `off` : envoie la commande `power`
-  - `tv` : envoie la séquence `home`, `wait2000`, `red`, `ok`, `wait4000`
-  - `unmute` : envoie `mute`
+  - `tv` : permet d'aller dans le mode TV
+  - `unmute` : coupe/remet le son (envoie `mute`)
   - `home` : envoie la séquence `home`, `wait2000`, `red`
   - `back` : envoie la commande `red`
   - `pause` : envoie la commande `play`
-  - `videos` : envoie la séquence `home`, `wait2000`, `red`, `right`, `ok`
-  - `direct` : envoie la séquence `green`, `ok`
-  - `enregistrements` : envoie la séquence `home`, `wait2000`, `red`, `up`, `ok`
-  - `soundDown` : envoie la commande `vol_dec`
-  - `soundUp` : envoie la commande `vol_inc`
-  - `programUp` : envoie la commande `prgm_inc`
-  - `programDown` : envoie la commande `prgm_dec`
+  - `videos` : permet d'aller dans "Mes Vidéos"
+  - `photos` : permet d'aller dans "Mes Photos"
+  - `musiques` : permet d'aller dans "Mes Musiques"
+  - `enregistrements` : permet d'aller dans "Mes enregistrements" (envoie la séquence `home`, `wait2000`, `red`, `up`, `ok`)
+  - `direct` : remet le direct (envoie la séquence `green`, `ok`)
+  - `soundDown` : baisse de son de 1 point (envoie la commande `vol_dec`)
+  - `soundUp` : augmente le son de 1 point (envoie la commande `vol_inc`)
+  - `soundLongDown` : baisse le son de 30 points (utile pour ceux qui utilisent des barres de son) (envoie la commande `vol_dec` en simulant un appui long)
+  - `soundLongUp` : augmente le son de 30 points (utile pour ceux qui utilisent des barres de son) (envoie la commande `vol_inc` en simulant un appui long)
+  - `programUp` : changement de chaine (envoie la commande `prgm_inc`)
+  - `programDown` : changement de chaine (envoie la commande `prgm_dec`)
   - `folder XYZ` : permet de chercher le répertoire XYZ dans `search_path` (qui est défini dans la configuration), puis de s'y rendre
+     - `folder{/Disque dur/Musiques/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Musiques` et de s'y rendre
+     - `folder{/Disque dur/Photos/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Photos` et de s'y rendre
+     - `folder{/Disque dur/Vidéos/} XYZ` : permet de chercher le répertoire XYZ dans `/Disque dur/Vidéos` et de s'y rendre
   - `zappe sur ABC` ou `zappe sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 (exemple : `freebox_zappe sur la 1` ou `freebox_zappe sur TF1`)
   - `zappelong sur ABC` ou `zappelong sur la 123` : permet de zapper sur la chaine ABC ou sur la chaine dont le numéro est 123 en faisant un appui long sur la touche (typiquement cela est utilisé pour le changement de chaine dans "Les Chaines Canal")
   - on peut aussi utiliser `*X` pour effectuer X fois la même action (exemple : `freebox_soundUp*5` équivaut à `freebox_soundUp,soundUp,soundUp,soundUp,soundUp`)

@@ -303,10 +303,14 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       case 'back': { key='red'; break; }
       case 'pause': { key='play'; break; }
       case 'videos': { key='home,wait3000,home,right,ok'; break; }
+      case 'photos': { key='home,wait3000,home,left,ok'; break; }
+      case 'musiques': { key='home,wait3000,home,right,right,ok'; break; }
       case 'direct': { key='green,ok'; break; }
       case 'enregistrements': { key='home,wait3000,home,up,ok'; break; }
       case 'soundDown': { key='vol_dec'; break; }
       case 'soundUp': { key='vol_inc'; break; }
+      case 'soundLongDown': { key='vol_dec'; longPress=true; break; }
+      case 'soundLongUp': { key='vol_inc'; longPress=true; break; }
       case 'programUp': { key='prgm_inc'; break; }
       case 'programDown': { key='prgm_dec'; break; }
       default: { key=cmd; break; }
@@ -322,11 +326,23 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
       if (!state) return _this.executeCommand('on')
     })
     .then(function() {
-      return _this.findFolder(commande.slice(7), _this.config.search_path)
+      var searchPath = _this.config.search_path;
+      var folderName = commande.slice(7);
+      // "folder" peut-être suivi de {/Disque dur/Vidéos|Photos|Musiques/...}
+      if (commande.charAt(6) === '{') {
+        var indexEnd = commande.indexOf('}');
+        searchPath = commande.slice(7, indexEnd);
+        folderName = commande.slice(indexEnd+1).replace(/^\s|\s$/g,"");
+      }
+      return _this.findFolder(folderName, searchPath)
     })
     .then(function(path) {
       if (path) {
-        return _this.executeCommand("videos,wait4000")
+        var location = 'videos';
+        var pathLower = path.toLowerCase();
+        if (pathLower.indexOf('/disque dur/photos/') !== -1) location="photos";
+        else if (pathLower.indexOf('/disque dur/musiques/') !== -1) location="musiques";
+        return _this.executeCommand(location+",wait4000")
         .then(function() {
           if (_this.plugins.notifier) _this.plugins.notifier.action("Le dossier a été trouvé");
           return _this.goToFolder(path);
@@ -389,6 +405,8 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
             if (longPress && idx+1 < keys.length) {
               url += "&long=true";
             }
+          } else if (longPress) {
+            url += "&long=true";
           }
           console.log("[assistant-freebox] Url => "+url);
           setTimeout(function() {
@@ -551,11 +569,10 @@ AssistantFreebox.prototype.findFolder=function(foldertofind, path) {
 
 /**
  * On va se déplacer jusque dans le dossier spécificé
- * @param  {String} b64path La version base64 du path
+ * @param  {String} path Le path
  */
 AssistantFreebox.prototype.goToFolder=function(path) {
   var _this=this;
-  //var path = _this.fromBase64(b64path);
   var folders = path.split("/").slice(3);
   var deeper=function(folder, currentPath) {
     var options = {
@@ -594,7 +611,7 @@ AssistantFreebox.prototype.goToFolder=function(path) {
   }
   return _this.requestSession()
   .then(function() {
-    return deeper(folders.shift(), "/Disque dur/Vidéos");
+    return deeper(folders.shift(), path.split("/").slice(0,3).join("/"));
   })
 }
 

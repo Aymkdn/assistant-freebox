@@ -1,5 +1,10 @@
 # Changelog
 
+**Change Log v2.0.12 (4 mars 2018)**
+
+  - Ajout des commandes `musiques` et `photos`, ainsi qu'une option supplémentaire pour la commande `folder` (voir https://github.com/Aymkdn/assistant-freebox/issues/18)
+  - Ajout des commandes `soundLongUp` et `soundLongDown` (voir https://github.com/Aymkdn/assistant-freebox/issues/19) pour ceux qui utilisent une barre de son
+
 **Change Log v2.0.11 (1 décembre 2018)**
 
   - Ajout de la commande `zappelong` (voir https://github.com/Aymkdn/assistant-plugins/issues/194)
