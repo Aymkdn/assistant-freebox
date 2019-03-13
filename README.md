@@ -7,6 +7,8 @@ Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) 
 **ATTENTION** : vous n'avez besoin **QUE** du plugin `assistant-freebox` pour piloter la Freebox (pas besoin de `assistant-ifttt` ou `assistant-wait`, ou autre....).  
 Le seul autre plugin que vous pouvez **ÉVENTUELLEMENT** installer, est le plugin `assistant-notifier`, et **SEULEMENT** dans le cas où vous avez un Google Home chez vous. En effet, si vous utilisez la commande vocale `va dans le dossier ...`, alors un message est envoyé au Google Home pour dire si le dossier a été trouvé ou non. Pour le moment, c'est la seule utilisation du retour vocal vers le Google Home.
 
+<div class="important message">Tu cherches seulement à contrôler la <b>Freebox Révolution à la voix, mais sans rien installer ?</b> Alors regarde cet autre projet : <a href="https://assistant.kodono.info/freebox/">https://assistant.kodono.info/freebox/</a></div>
+
 ## Sommaire
 
   - [Installation](#installation)
