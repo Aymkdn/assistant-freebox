@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.13 (18 août 2019)**
+
+  - Ajout des chaines optionnelles (voir https://github.com/Aymkdn/assistant-freebox/issues/22)
+
 **Change Log v2.0.12 (4 mars 2018)**
 
   - Ajout des commandes `musiques` et `photos`, ainsi qu'une option supplémentaire pour la commande `folder` (voir https://github.com/Aymkdn/assistant-freebox/issues/18)

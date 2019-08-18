@@ -56,14 +56,16 @@ AssistantFreebox.prototype.init = function(plugins) {
     } catch(err) {
       // on récupère les chaines Free
       console.log("[assistant-freebox] Récupération des chaines télé...");
-      var url = (_this.config.use_Chaines_CANAL ? 'https://assistant.kodono.info/freebox.php?param=canalsat' : 'http://www.free.fr/freebox/js/datas/tv/jsontv.js?callback=majinboo&_='+Date.now());
-      return request({
-        url:url,
-        agentOptions:{ "rejectUnauthorized":false }
-      })
+      let options = (_this.config.use_Chaines_CANAL ? ['https://assistant.kodono.info/freebox.php?param=canalsat'] : ['http://www.free.fr/freebox/js/datas/tv/jsontv.js?_='+Date.now(), 'http://www.free.fr/freebox/js/datas/tv/jsontvo.js?_='+Date.now()]);
+      return Promise.all(options.map(function(url) {
+        return request({
+          url:url,
+          agentOptions:{ "rejectUnauthorized":false }
+        })
+      }))
       .catch(function() {
         try {
-          _this.chaines = require('./chaines.json');
+          _this.chaines = require(chainesFilePath);
         } catch(err) {
           console.log("[assistant-freebox] ERREUR : Impossible de récupérer la liste des chaines...");
         }
@@ -71,36 +73,37 @@ AssistantFreebox.prototype.init = function(plugins) {
       })
     }
   })
-  .then(function(response) {
-    if (response) {
+  .then(function(res) {
+    if (res) {
       // on va lire le fichier replace_chaine.json qui permet de substituer certaines chaines
       var substitution = require("./replace_chaine");
-
       // puis on s'occupe de la réponse du serveur
-      var body =response.slice(9).replace(/\)\W+$/,"");
-      body = JSON.parse(body);
-      var i, chaines=[], nom, canal, slash;
-      for (i=0, len=body.chaines.length; i<len; i++) {
-        nom = _this.decodeEntities(body.chaines[i].nom);
-        // on remplace certains noms
-        nom = nom.toLowerCase().replace(/ la chaine/,"").replace(/\+/g," plus ").replace(/\s+/g," ").replace(/canal plus/,"canal +").replace(/&/g," et ").replace(/\!/g,"").trim();
-        slash = nom.indexOf('/');
-        if (slash > -1) nom = nom.slice(0,slash);
-        nom = nom.replace(/\s+$/,"").replace(/\s(\d)/g,"$1");
-        // on fait la substitution
-        if (substitution[nom]) nom=substitution[nom];
-        if (!nom) continue;
-        canal = body.chaines[i].canal;
-        _this.chaines[nom] = canal;
-      }
+      res.forEach(function(response) {
+        var body =response.slice(9).replace(/\)\W+$/,"");
+        body = JSON.parse(body);
+        var i, chaines=[], nom, canal, slash;
+        for (i=0, len=body.chaines.length; i<len; i++) {
+          nom = _this.decodeEntities(body.chaines[i].nom);
+          // on remplace certains noms
+          nom = nom.toLowerCase().replace(/ la chaine/,"").replace(/\+/g," plus ").replace(/\s+/g," ").replace(/canal plus/,"canal +").replace(/&/g," et ").replace(/\!/g,"").trim();
+          slash = nom.indexOf('/');
+          if (slash > -1) nom = nom.slice(0,slash);
+          nom = nom.replace(/\s+$/,"").replace(/\s(\d)/g,"$1");
+          // on fait la substitution
+          if (substitution[nom]) nom=substitution[nom];
+          if (!nom) continue;
+          canal = body.chaines[i].canal;
+          _this.chaines[nom] = canal;
+        }
+      });
       // chaines manquantes
-      _this.chaines["canal +"]="4";
+      //_this.chaines["canal +"]="4";
       _this.chaines["mosaïque"]=_this.chaines["la zéro"]="0";
       // on écrit dans le fichier local
       fs.writeFileSync(chainesFilePath, JSON.stringify(_this.chaines, null, 2));
+      console.log("[assistant-freebox] Récupération des chaines terminée !");
     }
 
-    if (response!==null) console.log("[assistant-freebox] Récupération des chaines terminée !");
     return _this;
   })
 }
