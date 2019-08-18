@@ -95,6 +95,10 @@ Par défaut un délai de 300 millisecondes est appliqué entre chaque envoi de c
 
 Par défaut un délai de 20 millisecondes est appliqué entre chaque envoi de commande de volume vers la Freebox (pour augmenter/baisser le volume). Il est possible de modifier ce délai en ajoutant ce paramètre dans le fichier de configuration.
 
+### Paramètre `app_token`
+
+La valeur de ce paramètre est un jeton d'authentification qui est automatiquement généré par la Freebox lors du processus d'autorisation. Il peut parfois s'avérer nécessaire de supprimer `app_token` pour forcer sa recréation lors du prochain démarrage, par exemple si l'on change de Freebox ou si l'on révoque l'accès de l'application `assistant-freebox` depuis Freebox OS.
+
 ## Utilisation
 
 J'ai créé des applets IFTTT pour vous faciliter la tâche.
