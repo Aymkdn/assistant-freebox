@@ -278,7 +278,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
         // on vérifie si la Freebox est allumée
         return _this.isPlayerOn()
         .then(function(state) {
-          if (!state) return 'power,wait7000'
+          if (_this.config.check_player_on === false || !state) return 'power,wait7000'
           return "";
         })
       }
@@ -286,7 +286,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
         // on vérifie si la Freebox est allumée
         return _this.isPlayerOn()
         .then(function(state) {
-          if (state) return "power"
+          if (_this.config.check_player_on === false || state) return "power"
           return "";
         })
       }
@@ -326,7 +326,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
   if (commande.slice(0,6) === "folder") {
     return _this.isPlayerOn()
     .then(function(state) {
-      if (!state) return _this.executeCommand('on')
+      if (_this.config.check_player_on !== false && !state) return _this.executeCommand('on')
     })
     .then(function() {
       var searchPath = _this.config.search_path;
@@ -382,7 +382,7 @@ AssistantFreebox.prototype.executeCommand=function(commande) {
     return (keys[0] !== "power" ? _this.isPlayerOn() : Promise.resolve(true))
   })
   .then(function(state) {
-    if (!state) {
+    if (_this.config.check_player_on !== false && !state) {
       keys.splice(0,0,'power','wait7000'); // on l'allume
       console.log("[assistant-freebox] La Freebox n'est pas allumée, donc on l'allume.");
     }
