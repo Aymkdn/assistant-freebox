@@ -1,5 +1,9 @@
 # Changelog
 
+**Change Log v2.0.14 (14 septembre 2019)**
+
+  - Prend en compte le paramètre `check_player_on` (voir https://github.com/Aymkdn/assistant-plugins/issues/254)
+
 **Change Log v2.0.13 (18 août 2019)**
 
   - Ajout des chaines optionnelles (voir https://github.com/Aymkdn/assistant-freebox/issues/22)
