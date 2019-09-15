@@ -15,7 +15,7 @@ var PromiseChain = function(arr, fct) {
 var AssistantFreebox = function(configuration) {
   this.config = configuration;
   // url pour accéder au Freebox Server
-  this.serverURL = "https://"+(this.config.server_ip||"mafreebox.freebox.fr")+"/api/v4/";
+  this.serverURL = "http://"+(this.config.server_ip||"mafreebox.freebox.fr")+"/api/v4/";
   // pour le Freebox Server
   this.freeboxServer = {
     app_id:"assistant.plugin.freebox",
@@ -56,7 +56,7 @@ AssistantFreebox.prototype.init = function(plugins) {
     } catch(err) {
       // on récupère les chaines Free
       console.log("[assistant-freebox] Récupération des chaines télé...");
-      let options = (_this.config.use_Chaines_CANAL ? ['https://assistant.kodono.info/freebox.php?param=canalsat'] : ['http://www.free.fr/freebox/js/datas/tv/jsontv.js?_='+Date.now(), 'http://www.free.fr/freebox/js/datas/tv/jsontvo.js?_='+Date.now()]);
+      let options = (_this.config.use_Chaines_CANAL ? ['https://assistant.kodono.info/freebox.php?param=canalsat'] : ['https://www.free.fr/freebox/js/datas/tv/jsontv.js?_='+Date.now(), 'https://www.free.fr/freebox/js/datas/tv/jsontvo.js?_='+Date.now()]);
       return Promise.all(options.map(function(url) {
         return request({
           url:url,
