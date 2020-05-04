@@ -1,6 +1,6 @@
 # assistant-freebox
 
-CE PLUGIN N'EST PLUS MAINTENU ! MON TEMPS EST MAINTENANT CONSACRÉ À LA VERSION CLOUD : https://assistant.kodono.info/freebox/
+<div class="important message">CE PLUGIN N'EST PLUS MAINTENU ! MON TEMPS EST MAINTENANT CONSACRÉ À LA VERSION CLOUD : <a href="https://assistant.kodono.info/freebox/">https://assistant.kodono.info/freebox/</a></div>
 
 -----------------------------------------------------------------------------------------------------------------------
 
